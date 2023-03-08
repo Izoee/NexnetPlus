@@ -1,6 +1,6 @@
 # Nexnet+ 
 
-![alt text](https://cdn.discordapp.com/attachments/1072577535197593600/1083038627199717458/image.png)  
+![alt text](https://github.com/Izoee/NexnetPlus/blob/main/NexnetPlusDisplay.png?raw=true)  
 Current Version : 1.0.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/changelog.md)
 ### [Download and Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/EnableNexnetPlus.md)
 
