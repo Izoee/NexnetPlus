@@ -2,7 +2,7 @@
 ### STEAM ONLY  
 ### OPEN AN IN GAME MENU BEFORE OPENING THE NEXNET+ MENU  
 
-![alt text](https://cdn.discordapp.com/attachments/1068616740235387002/1082760055717371914/image.png)  
+![alt text](https://cdn.discordapp.com/attachments/1072577535197593600/1083038627199717458/image.png)  
 Current Version : 1.0.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/changelog.txt)
 ### [How to Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/EnableNexnetPlus.txt)
 
