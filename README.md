@@ -4,7 +4,7 @@
 
 ![alt text](https://cdn.discordapp.com/attachments/1068616740235387002/1082760055717371914/image.png)  
 Current Version : 1.0.2  
-### [How to Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/How%20To%20Setup%20Lua.txt)
+### [How to Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/EnableNexnetPlus.txt)
 
 #### Features :
 - Moveable Menu!
