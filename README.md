@@ -3,7 +3,7 @@
 ### OPEN AN IN GAME MENU BEFORE OPENING THE NEXNET+ MENU  
 
 ![alt text](https://cdn.discordapp.com/attachments/1072577535197593600/1083038627199717458/image.png)  
-Current Version : 1.0.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/changelog.txt)
+Current Version : 1.0.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/changelog.md)
 ### [How to Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/EnableNexnetPlus.md)
 
 #### Features :
