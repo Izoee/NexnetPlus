@@ -7,7 +7,7 @@ Current Version : 1.0.2
 ### [How to Enable LUA](https://github.com/Izoee/NexnetPlus/blob/main/How%20To%20Setup%20Lua.txt)
 
 #### Features :
-- MOVEABLE MENU!
+- Moveable Menu!
 - World Event ESP
 - Keg ESP
 - Athena Chest ESP
