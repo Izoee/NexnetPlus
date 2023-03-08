@@ -1,2 +1,2 @@
 # Nexnet+
-[DOWNLOAD](https://www.google.com)
+[DOWNLOAD](https://github.com/Izoee/NexnetPlus/archive/refs/heads/main.zip)
