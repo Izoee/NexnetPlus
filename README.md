@@ -1,6 +1,4 @@
-# Nexnet+
-### STEAM ONLY  
-### OPEN AN IN GAME MENU BEFORE OPENING THE NEXNET+ MENU  
+# Nexnet+ 
 
 ![alt text](https://cdn.discordapp.com/attachments/1072577535197593600/1083038627199717458/image.png)  
 Current Version : 1.0.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/changelog.md)
@@ -19,8 +17,8 @@ Current Version : 1.0.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - Ammo Pouch ESP
   
 #### Keybinds :
-- HOME - Open/Close the Menu  
-- LEFT CLICK (anywhere but the menu) - Closes the Menu and resets its position  
+- **HOME** - Open/Close the Menu  
+- **LEFT CLICK** (Anywhere but the Menu) - Closes the Menu and resets its position  
 
 #### Bugs :  
 - There is an issue where the menu can get stuck in the bottom left corner. You can click anywhere on the screen to close the menu and reset the position to fix the issue. 
