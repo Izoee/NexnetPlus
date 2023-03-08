@@ -11,4 +11,15 @@ Keybinds :
 - HOME - Open/Close the Menu  
 - LEFT CLICK (anywhere but the menu) - Closes the menu and resets its position  
   
+Features :
+- World Event ESP
+- Keg ESP
+- Athena Chest ESP
+- Shark ESP
+- Shark Alert
+- Megalodon ESP
+- Mermaid ESP
+- Siren ESP
+- Ammo Pouch ESP
+  
 [Download](https://github.com/Izoee/NexnetPlus/archive/refs/heads/main.zip)  
