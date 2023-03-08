@@ -599,14 +599,16 @@ function onRenderEvent()
                     local sX, sY = Nexnet_WorldToScreen(x, y, z)
                     dist = math.floor(math.sqrt((posX - x)^2 + (posY - y)^2)/100)
                     if x ~= 0 and y ~= 0 then
-                        if sharkToggle == true then
-                            if sX > 0 then
-                                Nexnet_String("- Shark -", sX, sY, 255, 255, 255, 255, 15, 1)
+                        if dist <= 50 then
+                            if sharkToggle == true then
+                                if sX > 0 then
+                                    Nexnet_String("- Shark -", sX, sY, 255, 255, 255, 255, 15, 1)
+                                end
                             end
-                        end
-                        if sharkAlertToggle == true then
-                            if sX <= 0 then
-                                Nexnet_String("! Shark ["..dist.."m] !", midX, midY + (i*25), 255, 0, 0, 255, 15, 1)
+                            if sharkAlertToggle == true then
+                                if sX <= 0 then
+                                    Nexnet_String("! Shark ["..dist.."m] !", midX, midY + (i*25), 255, 0, 0, 255, 15, 1)
+                                end
                             end
                         end
                     end
