@@ -1,21 +1,11 @@
-How to setup LUA :
-
 YOU MUST BE ON THE STEAM VERSION OF SEA OF THIEVES TO USE NEXNET+
 
-  Step one:
-  Make a .lua file into the NexNet Client folder and call it Script.lua
-
-  Step two:
-  Find a script you like in the Lua-Scripts channel
-
-  Step three: 
-  Download the file
-
-  Step four: 
-  Copy the code from your chosen script and paste it into your .lua file that you made in Step one
-
-  Step five: 
-  Enable Lua in the menu
-
-  Step six:
-  Enjoy Nexnet+
+How to setup lua
+  1. Click the download button at the bottom of the NexnetPlus readme
+  2. Open the "NexnetPlus-main.zip" file
+  3. Open the "NexnetPlus-main" folder in the zip file
+  4. Find the "Script.lua" file
+  5. Drag and drop "Script.lua" to the same folder as your Nexnet Client
+  6. Load the Nexnet Client (make sure you're running it as admin)
+  7. Enable Lua(Steam) in the menu
+  8. Enjoy Nexnet+
