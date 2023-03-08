@@ -14,4 +14,4 @@
 
 ## WARNING :
 - **You must open an in-game Menu before opening the Nexnet+ Menu or your cursor will not be visible.**
-  - Fix this by clicking anywhere on the screen to close the Nexnet+ Menu and reset it to its default position
+  - You can fix this by clicking anywhere on the screen to close the Nexnet+ Menu and reset it to its default position
