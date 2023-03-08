@@ -1,6 +1,6 @@
 # Nexnet+
 ### STEAM ONLY  
-#### OPEN AN IN GAME MENU BEFORE OPENING THE NEXNET+ MENU  
+### OPEN AN IN GAME MENU BEFORE OPENING THE NEXNET+ MENU  
 
 ![alt text](https://cdn.discordapp.com/attachments/1068616740235387002/1082760055717371914/image.png)  
 Current Version : 1.0.2  
@@ -22,4 +22,4 @@ Keybinds :
 - HOME - Open/Close the Menu  
 - LEFT CLICK (anywhere but the menu) - Closes the menu and resets its position  
   
-[Download](https://github.com/Izoee/NexnetPlus/archive/refs/heads/main.zip)  
+### [Download](https://github.com/Izoee/NexnetPlus/archive/refs/heads/main.zip)  
