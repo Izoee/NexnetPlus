@@ -4,7 +4,7 @@
 
 ![alt text](https://cdn.discordapp.com/attachments/1072577535197593600/1083038627199717458/image.png)  
 Current Version : 1.0.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/changelog.md)
-### [How to Download and Install Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/EnableNexnetPlus.md)
+### [Download and Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/EnableNexnetPlus.md)
 
 #### Features :
 - Moveable Menu!
