@@ -2,7 +2,7 @@
 Current Version : 1.0.1  
   
 ### STEAM ONLY  
-####OPEN AN IN GAME MENU BEFORE OPENING THE NEXNET+ MENU  
+#### OPEN AN IN GAME MENU BEFORE OPENING THE NEXNET+ MENU  
 
 ![alt text](https://cdn.discordapp.com/attachments/1068616740235387002/1082760055717371914/image.png "Logo Title Text 1")
   
