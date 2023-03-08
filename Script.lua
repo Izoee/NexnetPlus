@@ -424,7 +424,7 @@ function onRenderEvent()
         Nexnet_Line(pCX + 100, divider, pCX - 100, divider, bR, bG, bB, bA)
         Nexnet_Line(pCX + 100, eButtonY - 12, pCX - 100, eButtonY - 12, bR, bG, bB, bA)
         Nexnet_Rect(pX, pY, pW, pH, bR, bG, bB, bA)
-        Nexnet_String("NEXNET+ by Izodope", pCX, title, tR, tB, tG, tA, 15, 1)
+        Nexnet_String("NEXNET+", pCX, title, tR, tB, tG, tA, 15, 1)
 
         Nexnet_String("World Events", aLeft, lineOne, tR, tB, tG, tA, 15, 0)
         
