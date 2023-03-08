@@ -7,7 +7,7 @@ Current Version : 1.0.1
   
 There is an issue where the menu can get stuck in the bottom left corner, just click anywhere on the screen and it'll close the menu and reset the position. If you open the Nexnet+ Menu without opening an in-game menu, your mouse will not show up. you can click anywhere besides the menu window, and it'll close the menu and reset its position to fix the problem.  
   
-Keybinds :  
+Keybinds :
 - HOME - Open/Close the Menu  
 - LEFT CLICK (anywhere but the menu) - Closes the menu and resets its position  
   
