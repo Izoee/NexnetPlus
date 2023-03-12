@@ -859,7 +859,7 @@ function onRenderEvent()
 
         Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, tR, tB, tG, tA)
         Nexnet_String("Close", eBCX, eBCY, tR, tB, tG, tA, 15, 0)
-        Nexnet_String("v1.0.2", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
+        Nexnet_String("v1.1.0", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
     end
 
     -- BACKEND
