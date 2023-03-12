@@ -28,3 +28,10 @@ Current Version : 1.1.0 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 #### Features In-Progress :
   - Cannon Aim Prediction
   - X-Marks ESP
+#### Credits :
+  - @Izodope#9936
+  - @DevGrab#0815
+  - @Waffle#0758
+  - @atom.#2135
+  - @! Camo#0001
+  - @Juke#7394
