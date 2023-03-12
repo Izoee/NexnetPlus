@@ -10,7 +10,7 @@
         @Waffle#0758 - Mermaid Script
         @atom.#2135 - Random help here and there
         @! Camo#0001 - Testing & Telling me I have a skill issue
-        @Juke#7394 - Island ESP (the bitchwork)
+        @Juke#7394 - Island ESP Bitchwork
 --]]
 
 -- Menu Toggle
@@ -1135,4 +1135,5 @@ end
         @Waffle#0758 - Mermaid Script
         @atom.#2135 - Random help here and there
         @! Camo#0001 - Testing & Telling me I have a skill issue
+        @Juke#7394 - Island ESP Bitchwork
 --]]
