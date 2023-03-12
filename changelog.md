@@ -1,4 +1,7 @@
 ## Changes
+- 1.1.0
+  + Added Ladder ESP
+  + Added Island ESP
 - 1.0.2 
   + Shark ESP and Shark Alert radius decreased to 50 meters.
 - 1.0.1 
