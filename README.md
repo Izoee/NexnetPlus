@@ -24,5 +24,5 @@ Current Version : 1.1.0 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - There is an issue where the menu can get stuck in the bottom left corner. You can click anywhere on the screen to close the menu and reset the position to fix the issue. 
 - If you open the Nexnet+ Menu without opening an in-game menu, your mouse will not be visible. You can click anywhere besides the menu window to close the menu and reset its position to fix the problem.  
 #### Features In-Progress :
-  - Island Markers
-  - Cannon Aim Prediction (This will take a few updates)
+  - Cannon Aim Prediction
+  - X Marks ESP
