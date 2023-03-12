@@ -17,6 +17,7 @@ Current Version : 1.1.0 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - Ammo Pouch ESP
 - Ladder ESP
 - Island ESP
+- Ship Speed ESP
 
 #### Keybinds :
 - **HOME** - Open/Close the Menu  
