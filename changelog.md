@@ -1,4 +1,6 @@
 ## Changes
+- 1.1.1
+  + Added Ship Speed ESP
 - 1.1.0
   + Added Ladder ESP
   + Added Island ESP
