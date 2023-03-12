@@ -8,8 +8,8 @@
         @Izodope#9936 - Main Creator
         @DevGrab#0815 - Adding Functions, GUI Help, & Emotional Support
         @Waffle#0758 - Mermaid Script
-        @atom.#2135 - Random help here and there
-        @! Camo#0001 - Testing & Telling me I have a skill issue
+        @atom.#2135 - Ship Speed Script
+        @! Camo#0001 - Testing & telling me I have a skill issue
         @Juke#7394 - Island ESP Bitchwork
 --]]
 
@@ -30,6 +30,7 @@ sirenToggle = false
 ammoPouchToggle = false
 ladderToggle = false
 islandToggle = false
+shipSpeedToggle = false
 
 -- Mouse Position
 mX, mY = 0, 0
@@ -38,7 +39,7 @@ movingMenu = false
 
 -- Panel Size and Location
 pX, pY = 1650, 75 -- Change this to change the default location of the menu
-oW, oH = 200, 310
+oW, oH = 200, 335
 pW, pH = oW, oH
 pCX = pW / 2 + pX
 pCY = pH / 2 + pY
@@ -60,6 +61,7 @@ lineEight = lineSeven + 20
 lineNine = lineEight + 20
 lineTen = lineNine + 20
 lineEleven = lineTen + 20
+lineTwelve = lineEleven + 20
 
 -- Rectangle Position
 rectX = pCX + 73
@@ -74,6 +76,7 @@ l8RectY = lineEight + 4
 l9RectY = lineNine + 4
 l10RectY = lineTen + 4
 l11RectY = lineEleven + 4
+l12RectY = lineTwelve + 4
 
 -- Exit Button Position
 eButtonX = pW / 3 + pX
@@ -98,6 +101,7 @@ zoneL8Y = l8RectY - 4
 zoneL9Y = l9RectY - 4
 zoneL10Y = l10RectY - 4
 zoneL11Y = l11RectY - 4
+zoneL12Y = l12RectY - 4
 
 -- Clicks
 leftDown = false
@@ -448,6 +452,7 @@ merms = -1
 sirens = -1
 ammoPouches = -1
 ladders = -1
+ships = -1
 
 function checkBounds()
     -- Toggles
@@ -540,6 +545,12 @@ function checkBounds()
             else
                 islandToggle = false
             end
+        elseif mY >= zoneL12Y and mY <= zoneL12Y + 18 then
+            if shipSpeedToggle == false then
+                shipSpeedToggle = true
+            else
+                shipSpeedToggle = false
+            end
         end
     end
 end
@@ -598,6 +609,7 @@ function moveMenu(mouse)
     lineNine = lineEight + 20
     lineTen = lineNine + 20
     lineEleven = lineTen + 20
+    lineTwelve = lineEleven + 20
 
     -- Rectangle Position
     rectX = pCX + 73
@@ -612,6 +624,7 @@ function moveMenu(mouse)
     l9RectY = lineNine + 4
     l10RectY = lineTen + 4
     l11RectY = lineEleven + 4
+    l12RectY = lineTwelve + 4
 
     -- Exit Button Position
     eButtonX = pW / 3 + pX
@@ -636,6 +649,7 @@ function moveMenu(mouse)
     zoneL9Y = l9RectY - 4
     zoneL10Y = l10RectY - 4
     zoneL11Y = l11RectY - 4
+    zoneL12Y = l12RectY - 4
 end
 
 function onRenderEvent()
@@ -856,10 +870,17 @@ function onRenderEvent()
             Nexnet_Line(rectX, l11RectY, rectX + 10, l11RectY + 10, tR, tB, tG, tA)
         end
         Nexnet_Rect(rectX, l11RectY, 10, 10, tR, tB, tG, tA)
+        
+        Nexnet_String("Ship Speed", aLeft - 3, lineTwelve, tR, tB, tG, tA, 15, 0)
+        if shipSpeedToggle == true then
+            Nexnet_Line(rectX, l12RectY + 10, rectX + 10, l12RectY, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l12RectY, rectX + 10, l12RectY + 10, tR, tB, tG, tA)
+        end
+        Nexnet_Rect(rectX, l12RectY, 10, 10, tR, tB, tG, tA)
 
         Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, tR, tB, tG, tA)
         Nexnet_String("Close", eBCX, eBCY, tR, tB, tG, tA, 15, 0)
-        Nexnet_String("v1.1.0", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
+        Nexnet_String("v1.1.1", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
     end
 
     -- BACKEND
@@ -1093,6 +1114,7 @@ function onRenderEvent()
             end
         end
     end
+    
     if islandToggle == true then
         for i = #islandN, 0, -1 do
             sX, sY = Nexnet_WorldToScreen(islandX[i],islandY[i],islandZConst)
@@ -1100,6 +1122,29 @@ function onRenderEvent()
             if sX > 0 then
                 if dist < 3500 then
                     Nexnet_String(islandN[i].." ["..dist.."]", sX, sY, 255, 255, 255, 255, 15, 1)
+                end
+            end
+        end
+    end
+    
+    if ships == -1 then
+        ships = Nexnet_RegisterClass("Class Athena.Ship")
+    end
+    if shipSpeedToggle == true then
+        if ships > -1 then
+            local num = Nexnet_GetActorCount(ships)
+            if num > 0 then
+                for i = num, 1, -1 do
+                    local x, y, z = Nexnet_GetActorLocation(ships, i);
+                    local sX, sY = Nexnet_WorldToScreen(x, y, z);
+                    local velocityX, velocityY = Nexnet_GetActorVelocity(ships, i);
+                    local speed = (math.sqrt(velocityX^2 + velocityY^2) / 100);
+                    local newvel = string.format("%.0f",speed)
+                    if speed <1 then
+                        Nexnet_String("Not Moving", sX, sY - 25 , 0, 255, 255, 180, 15, 1);
+                    else
+                        Nexnet_String("Speed : [" .. newvel .. "m]", sX, sY - 25 , 0, 255, 255, 180, 15, 1);
+                    end
                 end
             end
         end
@@ -1115,7 +1160,7 @@ function onKeyPressed(key)
         end
     end
     -- ONLY FOR DEBUGGING/ADDING SHIT
-    ---[[
+    --[[
     if key == 17 then -- CTRL KEY (RELOADS THE MENU)
         Nexnet_Reload()
     end
@@ -1133,7 +1178,7 @@ end
     CREDITS :
         @DevGrab#0815 - Adding Features, GUI Help, & Emotional Support
         @Waffle#0758 - Mermaid Script
-        @atom.#2135 - Random help here and there
+        @atom.#2135 - Ship Speed Script
         @! Camo#0001 - Testing & Telling me I have a skill issue
         @Juke#7394 - Island ESP Bitchwork
 --]]
