@@ -15,7 +15,9 @@ Current Version : 1.1.0 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - Mermaid ESP
 - Siren ESP
 - Ammo Pouch ESP
-  
+- Ladder ESP
+- Island ESP
+
 #### Keybinds :
 - **HOME** - Open/Close the Menu  
 - **LEFT CLICK** (Anywhere but the Menu) - Closes the Menu and resets its position  
