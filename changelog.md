@@ -1,4 +1,6 @@
 ## Changes
+- 1.0.2
+  + Added color to Outposts and the Reaper's Hideout in the Island ESP
 - 1.1.1
   + Added Ship Speed ESP
 - 1.1.0
