@@ -590,7 +590,7 @@ function checkIfOutpost(name)
 
     for e = 9, 1, -1 do
         if index == nil then
-            parsedName = name:sub(pindex + 1, namelen)
+            local parsedName = name:sub(pindex + 1, namelen)
             if parsedName == "Outpost" then
                 return true
             else
