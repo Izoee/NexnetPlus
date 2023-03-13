@@ -118,7 +118,10 @@ islandY = {}
 islandZConst = 15000
 islandN = {}
 
--- Declare Variables
+iR, iG, iB, iA = 255, 255, 255, 255
+oR, oG, oB, oA = 0, 255, 0, 255
+
+-- Declare Island Positions
 islandX[0] = 497395
 islandY[0] = -327061
 islandN[0] = 'Traitors Fate Forteress'
@@ -579,6 +582,27 @@ function parseName(name)
     end
 end
 
+-- Outpost Checker
+function checkIfOutpost(name)
+    local namelen = string.len(name)
+    local index = 0
+    local pindex = 0
+
+    for e = 9, 1, -1 do
+        if index == nil then
+            parsedName = name:sub(pindex + 1, namelen)
+            if parsedName == "Outpost" then
+                return true
+            else
+                return false
+            end
+        else
+            pindex = index
+            index = string.find(name, " ", index + 1)
+        end
+    end
+end
+
 function moveMenu(mouse)
     -- Panel Size and Location
     if mouse == 1 then
@@ -880,7 +904,7 @@ function onRenderEvent()
 
         Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, tR, tB, tG, tA)
         Nexnet_String("Close", eBCX, eBCY, tR, tB, tG, tA, 15, 0)
-        Nexnet_String("v1.1.1", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
+        Nexnet_String("v1.1.2", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
     end
 
     -- BACKEND
@@ -1119,9 +1143,14 @@ function onRenderEvent()
         for i = #islandN, 0, -1 do
             sX, sY = Nexnet_WorldToScreen(islandX[i],islandY[i],islandZConst)
             dist = math.floor(math.sqrt((posX - islandX[i])^2 + (posY - islandY[i])^2)/100)
+            isOutpost = checkIfOutpost(islandN[i])
             if sX > 0 then
                 if dist < 3500 then
-                    Nexnet_String(islandN[i].." ["..dist.."]", sX, sY, 255, 255, 255, 255, 15, 1)
+                    if isOutpost == true then
+                        Nexnet_String(islandN[i].." ["..dist.."m]", sX, sY, oR, oG, oB, oA, 15, 1)
+                    else
+                        Nexnet_String(islandN[i].." ["..dist.."m]", sX, sY, iR, iG, iB, iA, 15, 1)
+                    end
                 end
             end
         end
