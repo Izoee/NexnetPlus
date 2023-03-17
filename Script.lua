@@ -121,7 +121,7 @@ islandN = {}
 iR, iG, iB, iA = 255, 255, 255, 255
 oR, oG, oB, oA = 0, 255, 0, 255
 
--- Declare Island Positions
+-- Declare Island Info
 islandX[0] = 497395
 islandY[0] = -327061
 islandN[0] = 'Traitors Fate Forteress'
@@ -904,7 +904,7 @@ function onRenderEvent()
 
         Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, tR, tB, tG, tA)
         Nexnet_String("Close", eBCX, eBCY, tR, tB, tG, tA, 15, 0)
-        Nexnet_String("v1.1.2", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
+        Nexnet_String("v1.1.3", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
     end
 
     -- BACKEND
@@ -935,6 +935,8 @@ function onRenderEvent()
                             Nexnet_String("- Ashen Winds ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
                         elseif name == "BP_PhantomTornado_C" then
                             Nexnet_String("- Veil Tornado ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                        elseif name == "BP_GhostShip_TornadoCloud_C" then
+                            Nexnet_String("- Ghost Fleet ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
                         end
                     end
                 end
