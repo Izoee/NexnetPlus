@@ -5,7 +5,7 @@ Current Version : 1.1.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 ### [Download and Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/EnableNexnetPlus.md)
 
 #### Features :
-- **Moveable Menu**
+- **Moveable Menu** - (Click and drag the Nexnet+ title bar)
 - World Event ESP
 - Keg ESP
 - Athena Chest ESP
