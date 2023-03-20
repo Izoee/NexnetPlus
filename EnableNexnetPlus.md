@@ -3,17 +3,19 @@
 - **YOU MUST OWN NEXNET**, you can buy it [here](https://nexnet-cheats.cc/).
 
 ## How to Download and Enable Nexnet+  :
-1. Download the [NexnetPlus-main.zip](https://github.com/Izoee/NexnetPlus/archive/refs/heads/main.zip) file.
-2. Open the "NexnetPlus-main.zip" file that you downloaded in step 1.
-3. Open the "NexnetPlus-main" folder.
-4. Find the "Script.lua" file.
-5. Drag and drop the "Script.lua" file into the same folder as your Nexnet Client.
-6. Load the Nexnet Client and inject (make sure you're running it as admin).
-7. Enable Lua(Steam) in the menu.
-8. Close the Nexnet Menu.
-9. Press the HOME key to open Nexnet+
-10. Enjoy
-11. (OPTIONAL & ADVANCED) [Edit Custom Colors](https://github.com/Izoee/NexnetPlus/blob/main/EditColors.md)
+  1. Download the [NexnetPlus-main.zip](https://github.com/Izoee/NexnetPlus/archive/refs/heads/main.zip) file.
+  2. Open the "NexnetPlus-main.zip" file that you downloaded in step 1.
+  3. Open the "NexnetPlus-main" folder.
+  4. Find the "Script.lua" file.
+  5. Drag and drop the "Script.lua" file into the same folder as your Nexnet Client.
+  6. Load the Nexnet Client and inject (make sure you're running it as admin).
+  7. Enable Lua(Steam) in the menu.
+  8. Close the Nexnet Menu.
+  9. Press the HOME key to open Nexnet+
+  10. Enjoy
+
+## OPTIONAL & ADVANCED :
+  - [How to Edit Colors](https://github.com/Izoee/NexnetPlus/blob/main/EditColors.md)
 
 ## WARNING :
 - **You MUST open an in-game Menu before opening the Nexnet+ Menu or your cursor will not be visible.**
