@@ -1,8 +1,8 @@
 ## Changes
 - **1.1.5**
   + Removed the Megalodon ESP because it was causing issues when used with the Shark and Shark Alert functions
-  + Shark Alert is no longer visible when you are out of the water except when you are on the bottom deck of a ship
-  + Ladder ESP is no longer visible when you are out of the water except when you are on the bottom deck of a ship
+  + Shark Alert is no longer visible when you are out of the water except while below deck on a ship
+  + Ladder ESP is no longer visible when you are out of the water except while below deck on a ship
   + Islands that are between 2500m and 3500m from you are now less opaque than islands 2500m or closer
   + Optimized toggle functions
 - **1.1.4**
