@@ -14,7 +14,7 @@
 9. Press the HOME key to open Nexnet+
 10. Enjoy
 
-## How to edit Colors :
+## How to edit Colors (ADVANCED) :
 1. Open the lua file in Notepad.
 2. Press CTRL+F and search for "-- COPY FROM HERE" without the ""
 3. Change any of the color values except the Fill Color and Fill Alpha to whatever you want. 
