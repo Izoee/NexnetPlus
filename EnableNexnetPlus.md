@@ -14,7 +14,7 @@
 9. Press the HOME key to open Nexnet+
 10. Enjoy
 
-## How to use custom colors
+## How to edit colors
 1. Open the lua file in Notepad.
 2. Press CTRL+F and search for "-- Colors" without the ""
 3. Change any of the color values except the fill color and alpha. You can generate color codes [here](https://rgbacolorpicker.com/).
