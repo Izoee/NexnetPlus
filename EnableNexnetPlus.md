@@ -13,6 +13,7 @@
 8. Close the Nexnet Menu.
 9. Press the HOME key to open Nexnet+
 10. Enjoy
+11. (OPTIONAL) [Edit Custom Colors](https://github.com/Izoee/NexnetPlus/blob/main/EditColors.md)
 
 ## WARNING :
 - **You MUST open an in-game Menu before opening the Nexnet+ Menu or your cursor will not be visible.**
