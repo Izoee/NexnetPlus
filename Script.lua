@@ -56,7 +56,7 @@ movingMenu = false
 
 -- Panel Size and Location
 pX, pY = 1650, 75 -- Change this to change the default location of the menu
-oW, oH = 200, 331
+oW, oH = 200, 311
 pW, pH = oW, oH
 pCX = pW / 2 + pX
 pCY = pH / 2 + pY
