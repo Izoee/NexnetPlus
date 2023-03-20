@@ -14,23 +14,40 @@
 --]]
 
 -- Menu Toggle
-pToggle = false
+pToggle = false -- DO NOT CHANGE THIS VARIABLE
 
 -- ESP Toggles
--- You can change the "false" for each individual one to true
--- and save the file for your preferred default settings
+-- You can change the "false" for each individual one to "true"
+-- and save the lua file for your preferred default settings
 eventToggle = false
 kegToggle = false
 chestToggle = false
 sharkToggle = false
 sharkAlertToggle = false
-megToggle = false
 mermToggle = false
 sirenToggle = false
 ammoPouchToggle = false
 ladderToggle = false
 islandToggle = false
 shipSpeedToggle = false
+
+-- Colors
+fillRGB, fillA = 20, 80 -- Fill Color and Alpha
+borderR, borderG, borderB, borderA = 255, 255, 255, 255 -- Border RGBA
+titleR, titleG, titleB, titleA = 255, 255, 255, 255 -- Title RGBA
+optionR, optionG, optionB, optionA = 255, 255, 255, 255 -- Text RGBA
+eventR, eventG, eventB, eventA = 255, 255, 255, 255 -- World Event RGBA
+kegR, kegG, kegB, kegA = 255, 255, 255, 255 -- Keg RGBA
+chestR, chestG, chestB, chestA = 255, 255, 255, 255 -- Chest RGBA
+sharkR, sharkG, sharkB, sharkA = 255, 255, 255, 255 -- Shark RGBA
+sAlertR, sAlertG, sAlertB, sAlertA = 255, 0, 0, 255 -- Shark Alert RGBA
+mermR, mermG, mermB, mermA = 255, 255, 255, 255 -- Mermaid RGBA
+sirenR, sirenG, sirenB, sirenA = 255, 255, 255, 255 -- Siren RGBA
+ammoR, ammoG, ammoB, ammoA = 255, 255, 255, 255 -- Ammo RGBA
+ladderR, ladderG, ladderB, ladderA = 255, 255, 255, 255 -- Ladder RGBA
+islandR, islandG, islandB, islandA = 255, 255, 255, 255 -- Island RGBA
+outpostR, outpostG, outpostB, outpostA = 0, 255, 0, 255 -- Outpost RGBA
+speedR, speedG, speedB, speedA = 255, 255, 255, 255 -- Ship Speed RGBA
 
 -- Mouse Position
 mX, mY = 0, 0
@@ -61,7 +78,6 @@ lineEight = lineSeven + 20
 lineNine = lineEight + 20
 lineTen = lineNine + 20
 lineEleven = lineTen + 20
-lineTwelve = lineEleven + 20
 
 -- Rectangle Position
 rectX = pCX + 73
@@ -76,15 +92,6 @@ l8RectY = lineEight + 4
 l9RectY = lineNine + 4
 l10RectY = lineTen + 4
 l11RectY = lineEleven + 4
-l12RectY = lineTwelve + 4
-
--- Exit Button Position
-eButtonX = pW / 3 + pX
-eButtonY = pH + pY - 35
-eButtonW = 70
-eButtonH = 25
-eBCX = eButtonW / 2 + eButtonX
-eBCY = eButtonH / 2 + eButtonY - 8
 
 -- Zones
 zoneXAlign = pX + 5
@@ -101,18 +108,17 @@ zoneL8Y = l8RectY - 4
 zoneL9Y = l9RectY - 4
 zoneL10Y = l10RectY - 4
 zoneL11Y = l11RectY - 4
-zoneL12Y = l12RectY - 4
+
+-- Exit Button Position
+eButtonX = pW / 3 + pX
+eButtonY = pH + pY - 35
+eButtonW = 70
+eButtonH = 25
+eBCX = eButtonW / 2 + eButtonX
+eBCY = eButtonH / 2 + eButtonY - 8
 
 -- Clicks
 leftDown = false
-
--- Colors
-fA = 80 -- Fill Transparency
-fC = 20 -- Fill Color
-bR, bG, bB, bA = 255, 255, 255, 255 -- Border RGBA
-tR, tG, tB, tA = 255, 255, 255, 255 -- Text RGBA
-iR, iG, iB, iA = 255, 255, 255, 255 -- Island RGBA
-oR, oG, oB, oA = 0, 255, 0, 255 -- Outpost RGBA
 
 -- Island Arrays
 islandX = {}
@@ -120,7 +126,7 @@ islandY = {}
 islandZConst = 15000
 islandN = {}
 
--- Declare Island Info
+-- Island Info
 islandX[0] = 497395; islandY[0] = -327061; islandN[0] = 'Traitors Fate Forteress'
 islandX[1] = 387505; islandY[1] = -304825; islandN[1] = 'Plunderers Plight'
 islandX[2] = 446022; islandY[2] = -206311; islandN[2] = 'Galleons Grave Outpost'
@@ -235,7 +241,6 @@ events = -1
 kegs = -1
 athenaChests = -1
 sharks = -1
-megs = -1
 merms = -1
 sirens = -1
 ammoPouches = -1
@@ -253,92 +258,42 @@ function checkBounds()
     if mX >= pX and mX <= pX+oW and mY >= pY and mY <= pY+oH then
     else
         closeUI()
-        endDown = true
+        resetPos = true
     end
 
     if mX >= zoneXAlign and mX <= zoneXAlign + 190 then
         if mY >= zoneL1Y and mY <= zoneL1Y + 18 then
-            if eventToggle == false then
-                eventToggle = true
-            else
-                eventToggle = false
-            end
+            eventToggle = not eventToggle
 
         elseif mY >= zoneL2Y and mY <= zoneL2Y + 18 then
-            if kegToggle == false then
-                kegToggle = true
-            else
-                kegToggle = false
-            end
+            kegToggle = not kegToggle
 
         elseif mY >= zoneL3Y and mY <= zoneL3Y + 18 then
-            if chestToggle == false then
-                chestToggle = true
-            else
-                chestToggle = false
-            end
+            chestToggle = not chestToggle
 
         elseif mY >= zoneL4Y and mY <= zoneL4Y + 18 then
-            if sharkToggle == false then
-                sharkToggle = true
-            else
-                sharkToggle = false
-            end
+            sharkToggle = not sharkToggle
 
         elseif mY >= zoneL5Y and mY <= zoneL5Y + 18 then
-            if sharkAlertToggle == false then
-                sharkAlertToggle = true
-            else
-                sharkAlertToggle = false
-            end
+            sharkAlertToggle = not sharkAlertToggle
 
         elseif mY >= zoneL6Y and mY <= zoneL6Y + 18 then
-            if megToggle == false then
-                megToggle = true
-            else
-                megToggle = false
-            end
+            mermToggle = not mermToggle
 
         elseif mY >= zoneL7Y and mY <= zoneL7Y + 18 then
-            if mermToggle == false then
-                mermToggle = true
-            else
-                mermToggle = false
-            end
-
+            sirenToggle = not sirenToggle
+            
         elseif mY >= zoneL8Y and mY <= zoneL8Y + 18 then
-            if sirenToggle == false then
-                sirenToggle = true
-            else
-                sirenToggle = false
-            end
+            ammoPouchToggle = not ammoPouchToggle
 
         elseif mY >= zoneL9Y and mY <= zoneL9Y + 18 then
-            if ammoPouchToggle == false then
-                ammoPouchToggle = true
-            else
-                ammoPouchToggle = false
-            end
+            ladderToggle = not ladderToggle
 
         elseif mY >= zoneL10Y and mY <= zoneL10Y + 18 then
-            if ladderToggle == false then
-                ladderToggle = true
-            else
-                ladderToggle = false
-            end
+            islandToggle = not islandToggle
         
         elseif mY >= zoneL11Y and mY <= zoneL11Y + 18 then
-            if islandToggle == false then
-                islandToggle = true
-            else
-                islandToggle = false
-            end
-        elseif mY >= zoneL12Y and mY <= zoneL12Y + 18 then
-            if shipSpeedToggle == false then
-                shipSpeedToggle = true
-            else
-                shipSpeedToggle = false
-            end
+            shipSpeedToggle = not shipSpeedToggle
         end
     end
 end
@@ -418,7 +373,6 @@ function moveMenu(mouse)
     lineNine = lineEight + 20
     lineTen = lineNine + 20
     lineEleven = lineTen + 20
-    lineTwelve = lineEleven + 20
 
     -- Rectangle Position
     rectX = pCX + 73
@@ -433,7 +387,6 @@ function moveMenu(mouse)
     l9RectY = lineNine + 4
     l10RectY = lineTen + 4
     l11RectY = lineEleven + 4
-    l12RectY = lineTwelve + 4
 
     -- Exit Button Position
     eButtonX = pW / 3 + pX
@@ -458,16 +411,16 @@ function moveMenu(mouse)
     zoneL9Y = l9RectY - 4
     zoneL10Y = l10RectY - 4
     zoneL11Y = l11RectY - 4
-    zoneL12Y = l12RectY - 4
 end
 
 function onRenderEvent()
-    local posX, posY = Nexnet_GetPlayerPos()
+    local posX, posY, posZ = Nexnet_GetPlayerPos()
     local panX, panY = Nexnet_GetViewportSize()
     local midX, midY = panX/2, panY/2
     mX, mY = Nexnet_GetMousePosition()
     left = Nexnet_IsLeftPressed()
     -- Nexnet_Console(true)
+    local roundPosZ = math.floor(posZ)
     if pToggle == true then
         Nexnet_Input(true)
         Nexnet_DisableUI(true)
@@ -489,111 +442,104 @@ function onRenderEvent()
             leftDown = false
         end
 
-        if endDown == true then
+        if resetPos == true then
             moveMenu(0)
-            endDown = false
+            resetPos = false
         end
 
         -- FILL
         for i = oW - 2, 2, -1 do
-            Nexnet_Line(pX + i, pY + 1, pX + i, pY + pH, fC, fC, fC, fA)
+            Nexnet_Line(pX + i, pY + 1, pX + i, pY + pH, fillRGB, fillRGB, fillRGB, fillA)
         end
         
         -- MENU
-        Nexnet_Line(pCX + 100, divider, pCX - 100, divider, bR, bG, bB, bA)
-        Nexnet_Line(pCX + 100, eButtonY - 12, pCX - 100, eButtonY - 12, bR, bG, bB, bA)
-        Nexnet_Rect(pX, pY, pW, pH, bR, bG, bB, bA)
-        Nexnet_String("NEXNET+", pCX, title, tR, tB, tG, tA, 15, 1)
+        Nexnet_Line(pCX + 100, divider, pCX - 100, divider, borderR, borderG, borderB, borderA)
+        Nexnet_Line(pCX + 100, eButtonY - 12, pCX - 100, eButtonY - 12, borderR, borderG, borderB, borderA)
+        Nexnet_Rect(pX, pY, pW, pH, borderR, borderG, borderB, borderA)
+        Nexnet_String("NEXNET+", pCX, title, optionR, optionB, optionG, optionA, 15, 1)
 
-        Nexnet_String("World Events", aLeft, lineOne, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("World Events", aLeft, lineOne, optionR, optionB, optionG, optionA, 15, 0)
         
         if eventToggle == true then
-            Nexnet_Line(rectX, l1RectY + 10, rectX + 10, l1RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l1RectY, rectX + 10, l1RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l1RectY + 10, rectX + 10, l1RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l1RectY, rectX + 10, l1RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l1RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l1RectY, 10, 10, optionR, optionB, optionG, optionA)
 
-        Nexnet_String("Kegs", aLeft - 23, lineTwo, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Kegs", aLeft - 23, lineTwo, optionR, optionB, optionG, optionA, 15, 0)
         if kegToggle == true then
-            Nexnet_Line(rectX, l2RectY + 10, rectX + 10, l2RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l2RectY, rectX + 10, l2RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l2RectY + 10, rectX + 10, l2RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l2RectY, rectX + 10, l2RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l2RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l2RectY, 10, 10, optionR, optionB, optionG, optionA)
 
-        Nexnet_String("Athena Chests", aLeft + 5, lineThree, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Athena Chests", aLeft + 5, lineThree, optionR, optionB, optionG, optionA, 15, 0)
         if chestToggle == true then
-            Nexnet_Line(rectX, l3RectY + 10, rectX + 10, l3RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l3RectY, rectX + 10, l3RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l3RectY + 10, rectX + 10, l3RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l3RectY, rectX + 10, l3RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l3RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l3RectY, 10, 10, optionR, optionB, optionG, optionA)
 
-        Nexnet_String("Sharks", aLeft - 17, lineFour, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Sharks", aLeft - 17, lineFour, optionR, optionB, optionG, optionA, 15, 0)
         if sharkToggle == true then
-            Nexnet_Line(rectX, l4RectY + 10, rectX + 10, l4RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l4RectY, rectX + 10, l4RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l4RectY + 10, rectX + 10, l4RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l4RectY, rectX + 10, l4RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l4RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l4RectY, 10, 10, optionR, optionB, optionG, optionA)
         
-        Nexnet_String("Shark Alert", aLeft - 5, lineFive, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Shark Alert", aLeft - 5, lineFive, optionR, optionB, optionG, optionA, 15, 0)
         if sharkAlertToggle == true then
-            Nexnet_Line(rectX, l5RectY + 10, rectX + 10, l5RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l5RectY, rectX + 10, l5RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l5RectY + 10, rectX + 10, l5RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l5RectY, rectX + 10, l5RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l5RectY, 10, 10, tR, tB, tG, tA)
-
-        Nexnet_String("Megalodon", aLeft - 5, lineSix, tR, tB, tG, tA, 15, 0)
-        if megToggle == true then
-            Nexnet_Line(rectX, l6RectY + 10, rectX + 10, l6RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l6RectY, rectX + 10, l6RectY + 10, tR, tB, tG, tA)
-        end
-        Nexnet_Rect(rectX, l6RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l5RectY, 10, 10, optionR, optionB, optionG, optionA)
         
-        Nexnet_String("Mermaids", aLeft - 7, lineSeven, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Mermaids", aLeft - 7, lineSix, optionR, optionB, optionG, optionA, 15, 0)
         if mermToggle == true then
-            Nexnet_Line(rectX, l7RectY + 10, rectX + 10, l7RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l7RectY, rectX + 10, l7RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l6RectY + 10, rectX + 10, l6RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l6RectY, rectX + 10, l6RectY + 10, optionR, optionB, optionG, optionA)
             
         end
-        Nexnet_Rect(rectX, l7RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l6RectY, 10, 10, optionR, optionB, optionG, optionA)
 
-        Nexnet_String("Sirens", aLeft - 18, lineEight, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Sirens", aLeft - 18, lineSeven, optionR, optionB, optionG, optionA, 15, 0)
         if sirenToggle == true then
-            Nexnet_Line(rectX, l8RectY + 10, rectX + 10, l8RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l8RectY, rectX + 10, l8RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l7RectY + 10, rectX + 10, l7RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l7RectY, rectX + 10, l7RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l8RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l7RectY, 10, 10, optionR, optionB, optionG, optionA)
 
-        Nexnet_String("Ammo Pouches", aLeft + 9, lineNine, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Ammo Pouches", aLeft + 9, lineEight, optionR, optionB, optionG, optionA, 15, 0)
         if ammoPouchToggle == true then
-            Nexnet_Line(rectX, l9RectY + 10, rectX + 10, l9RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l9RectY, rectX + 10, l9RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l8RectY + 10, rectX + 10, l8RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l8RectY, rectX + 10, l8RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l9RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l8RectY, 10, 10, optionR, optionB, optionG, optionA)
 
-        Nexnet_String("Ladders", aLeft - 13, lineTen, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Ladders", aLeft - 13, lineNine, optionR, optionB, optionG, optionA, 15, 0)
         if ladderToggle == true then
-            Nexnet_Line(rectX, l10RectY + 10, rectX + 10, l10RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l10RectY, rectX + 10, l10RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l9RectY + 10, rectX + 10, l9RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l9RectY, rectX + 10, l9RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l10RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l9RectY, 10, 10, optionR, optionB, optionG, optionA)
 
-        Nexnet_String("Islands", aLeft - 15, lineEleven, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Islands", aLeft - 15, lineTen, optionR, optionB, optionG, optionA, 15, 0)
         if islandToggle == true then
-            Nexnet_Line(rectX, l11RectY + 10, rectX + 10, l11RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l11RectY, rectX + 10, l11RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l10RectY + 10, rectX + 10, l10RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l10RectY, rectX + 10, l10RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l11RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l10RectY, 10, 10, optionR, optionB, optionG, optionA)
         
-        Nexnet_String("Ship Speed", aLeft - 3, lineTwelve, tR, tB, tG, tA, 15, 0)
+        Nexnet_String("Ship Speed", aLeft - 3, lineEleven, optionR, optionB, optionG, optionA, 15, 0)
         if shipSpeedToggle == true then
-            Nexnet_Line(rectX, l12RectY + 10, rectX + 10, l12RectY, tR, tB, tG, tA)
-            Nexnet_Line(rectX, l12RectY, rectX + 10, l12RectY + 10, tR, tB, tG, tA)
+            Nexnet_Line(rectX, l11RectY + 10, rectX + 10, l11RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l11RectY, rectX + 10, l11RectY + 10, optionR, optionB, optionG, optionA)
         end
-        Nexnet_Rect(rectX, l12RectY, 10, 10, tR, tB, tG, tA)
+        Nexnet_Rect(rectX, l11RectY, 10, 10, optionR, optionB, optionG, optionA)
 
-        Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, tR, tB, tG, tA)
-        Nexnet_String("Close", eBCX, eBCY, tR, tB, tG, tA, 15, 0)
-        Nexnet_String("v1.1.4", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
+        Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, optionR, optionB, optionG,optionA)
+        Nexnet_String("Close", eBCX, eBCY, optionR, optionB, optionG,optionA, 15, 0)
+        Nexnet_String("v1.1.5", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
     end
 
     -- BACKEND
@@ -613,19 +559,19 @@ function onRenderEvent()
 
                     if sX > 0 then
                         if name == "BP_SkellyFort_RitualSkullCloud_C" then
-                            Nexnet_String("- FotD ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                            Nexnet_String("- FotD ["..dist.."m] -", sX, sY, eventR, eventG, eventB, eventA, 15, 1)
                         elseif name == "BP_LegendSkellyFort_SkullCloud_C" then
-                            Nexnet_String("- FoF ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                            Nexnet_String("- FoF ["..dist.."m] -", sX, sY, eventR, eventG, eventB, eventA, 15, 1)
                         elseif name == "BP_SkellyFort_SkullCloud_C" then
-                            Nexnet_String("- Skeleton Fort ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                            Nexnet_String("- Skeleton Fort ["..dist.."m] -", sX, sY, eventR, eventG, eventB, eventA, 15, 1)
                         elseif name == "BP_SkellyShip_ShipCloud_C" then
-                            Nexnet_String("- Skeleton Fleet ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                            Nexnet_String("- Skeleton Fleet ["..dist.."m] -", sX, sY, eventR, eventG, eventB, eventA, 15, 1)
                         elseif name == "BP_AshenLord_SkullCloud_C" then
-                            Nexnet_String("- Ashen Winds ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                            Nexnet_String("- Ashen Winds ["..dist.."m] -", sX, sY, eventR, eventG, eventB, eventA, 15, 1)
                         elseif name == "BP_PhantomTornado_C" then
-                            Nexnet_String("- Veil Tornado ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                            Nexnet_String("- Veil Tornado ["..dist.."m] -", sX, sY, eventR, eventG, eventB, eventA, 15, 1)
                         elseif name == "BP_GhostShip_TornadoCloud_C" then
-                            Nexnet_String("- Ghost Fleet ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                            Nexnet_String("- Ghost Fleet ["..dist.."m] -", sX, sY, eventR, eventG, eventB, eventA, 15, 1)
                         end
                     end
                 end
@@ -649,11 +595,11 @@ function onRenderEvent()
                     if x ~= 0 and y ~= 0 then
                         if sX > 0 then
                             if name == "BP_MerchantCrate_PirateLegendBigGunpowderBarrelProxy_C" then
-                                Nexnet_String("- Athena Keg ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                                Nexnet_String("- Athena Keg ["..dist.."m] -", sX, sY, kegR, kegG, kegB, kegA, 15, 1)
                             elseif name == "BP_MerchantCrate_BigGunpowderBarrelProxy_C" then
-                                Nexnet_String("- Stronghold Keg ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                                Nexnet_String("- Stronghold Keg ["..dist.."m] -", sX, sY, kegR, kegG, kegB, kegA, 15, 1)
                             elseif name == "BP_MerchantCrate_GunpowderBarrelProxy_C" then
-                                Nexnet_String("- Powder Keg ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                                Nexnet_String("- Powder Keg ["..dist.."m] -", sX, sY, kegR, kegG, kegB, kegA, 15, 1)
                             end
                         end
                     end
@@ -678,9 +624,9 @@ function onRenderEvent()
                     if x ~= 0 and y ~= 0 then
                         if sX > 0 then
                             if name == "BP_TreasureChest_Proxy_PirateLegend_DVR_C" then
-                                Nexnet_String("- Ashen Athena Chest ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                                Nexnet_String("- Ashen Athena Chest ["..dist.."m] -", sX, sY, chestR, chestG, chestB, chestA, 15, 1)
                             elseif name == "BP_TreasureChest_Proxy_PirateLegend_C" then
-                                Nexnet_String("- Ashen Athena Chest ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                                Nexnet_String("- Ashen Athena Chest ["..dist.."m] -", sX, sY, chestR, chestG, chestB, chestA, 15, 1)
                             end
                         end
                     end
@@ -704,35 +650,16 @@ function onRenderEvent()
                         if dist <= 50 then
                             if sharkToggle == true then
                                 if sX > 0 then
-                                    Nexnet_String("- Shark -", sX, sY, 255, 255, 255, 255, 15, 1)
+                                    Nexnet_String("- Shark -", sX, sY, sharkR, sharkG, sharkB, sharkA, 15, 1)
                                 end
                             end
                             if sharkAlertToggle == true then
-                                if sX <= 0 then
-                                    Nexnet_String("! Shark ["..dist.."m] !", midX, midY + (i*25), 255, 0, 0, 255, 15, 1)
+                                if roundPosZ <= 300 then
+                                    if sX <= 0 then
+                                        Nexnet_String("! Shark ["..dist.."m] !", midX, midY + (i*25), sAlertR, sAlertG, sAlertB, sAlertA, 15, 1)
+                                    end
                                 end
                             end
-                        end
-                    end
-                end
-            end
-        end
-    end
-
-    if megs == -1 then
-        megs = Nexnet_RegisterClass("Class Athena.TinyShark")
-    end
-    if megToggle == true then
-        if megs > -1 then
-            local num = Nexnet_GetActorCount(megs)
-            if num > 0 then
-                for i = num, 1, -1 do
-                    local x, y, z = Nexnet_GetActorLocation(sharks, i)
-                    local sX, sY = Nexnet_WorldToScreen(x, y, z)
-                    dist = math.floor(math.sqrt((posX - x)^2 + (posY - y)^2)/100)
-                    if x ~= 0 and y ~= 0 then
-                        if sX > 0 then
-                            Nexnet_String("- Megalodon ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
                         end
                     end
                 end
@@ -754,7 +681,7 @@ function onRenderEvent()
 
                     if x ~= 0 and y ~= 0 then
                         if sX > 0 then
-                            Nexnet_String("- Mermaid ["..dist.."m] -", sX, sY, 255, 255, 255, 255, 15, 1)
+                            Nexnet_String("- Mermaid ["..dist.."m] -", sX, sY, mermR, mermG, mermB, mermA, 15, 1)
                         end
                     end
                 end
@@ -775,7 +702,7 @@ function onRenderEvent()
                     dist = math.floor(math.sqrt((posX - x)^2 + (posY - y)^2)/100)
                     if x ~= 0 and y ~= 0 then
                         if sX > 0 then
-                            Nexnet_String("- Siren -", sX, sY, 255, 255, 255, 255, 15, 1)
+                            Nexnet_String("- Siren -", sX, sY, sirenR, sirenG, sirenB, sirenA, 15, 1)
                         end
                     end
                 end
@@ -796,7 +723,7 @@ function onRenderEvent()
                     dist = math.floor(math.sqrt((posX - x)^2 + (posY - y)^2)/100)
                     if x ~= 0 and y ~= 0 then
                         if sX > 0 then
-                            Nexnet_String("*", sX, sY, 255, 255, 255, 255, 5, 1)
+                            Nexnet_String("*", sX, sY, ammoR, ammoG, ammoB, ammoA, 5, 1)
                         end
                     end
                 end
@@ -821,7 +748,7 @@ function onRenderEvent()
                         -- Nexnet_String(name.." ["..dist.."m]", sX, sY, 255, 255, 255, 255, 15, 1)
                         if name == "BP_SmallShipLadder_C" or  name == "BP_SmallShipLadder_02_C" or name == "BP_MediumShipLadder_C" or name == "BP_MediumShipLadder_02_C" or name == "BP_LargeShipLadder_C" or name == "BP_LargeShipLadder_02_C" then
                             if dist < 75 then
-                                Nexnet_String("Ladder".." ["..dist.."m]", sX, sY, 255, 255, 255, 255, 15, 1)
+                                Nexnet_String("Ladder".." ["..dist.."m]", sX, sY, ladderR, ladderG, ladderB, ladderA, 15, 1)
                             end
                         end
                     end
@@ -832,15 +759,21 @@ function onRenderEvent()
     
     if islandToggle == true then
         for i = #islandN, 0, -1 do
-            sX, sY = Nexnet_WorldToScreen(islandX[i],islandY[i],islandZConst)
+            local sX, sY = Nexnet_WorldToScreen(islandX[i],islandY[i],islandZConst)
             dist = math.floor(math.sqrt((posX - islandX[i])^2 + (posY - islandY[i])^2)/100)
-            isOutpost = checkIfOutpost(islandN[i])
+            local isOutpost = checkIfOutpost(islandN[i])
             if sX > 0 then
-                if dist < 3500 then
+                if dist <= 2500 then
                     if isOutpost == true then
-                        Nexnet_String(islandN[i].." ["..dist.."m]", sX, sY, oR, oG, oB, oA, 15, 1)
+                        Nexnet_String(islandN[i].." ["..dist.."m]", sX, sY, outpostR, outpostG, outpostB, outpostA, 15, 1)
                     else
-                        Nexnet_String(islandN[i].." ["..dist.."m]", sX, sY, iR, iG, iB, iA, 15, 1)
+                        Nexnet_String(islandN[i].." ["..dist.."m]", sX, sY, islandR, islandG, islandB, islandA, 15, 1)
+                    end
+                elseif dist > 2500 and dist < 3500 then
+                    if isOutpost == true then
+                        Nexnet_String(islandN[i].." ["..dist.."m]", sX, sY, outpostR, outpostG, outpostB, outpostA - 100, 15, 1)
+                    else
+                        Nexnet_String(islandN[i].." ["..dist.."m]", sX, sY, islandR, islandG, islandB, islandA - 100, 15, 1)
                     end
                 end
             end
@@ -855,15 +788,15 @@ function onRenderEvent()
             local num = Nexnet_GetActorCount(ships)
             if num > 0 then
                 for i = num, 1, -1 do
-                    local x, y, z = Nexnet_GetActorLocation(ships, i);
-                    local sX, sY = Nexnet_WorldToScreen(x, y, z);
-                    local velocityX, velocityY = Nexnet_GetActorVelocity(ships, i);
-                    local speed = (math.sqrt(velocityX^2 + velocityY^2) / 100);
+                    local x, y, z = Nexnet_GetActorLocation(ships, i)
+                    local sX, sY = Nexnet_WorldToScreen(x, y, z)
+                    local velocityX, velocityY = Nexnet_GetActorVelocity(ships, i)
+                    local speed = (math.sqrt(velocityX^2 + velocityY^2) / 100)
                     local newvel = string.format("%.0f",speed)
-                    if speed <1 then
-                        Nexnet_String("Not Moving", sX, sY - 25 , 0, 255, 255, 180, 15, 1);
+                    if speed < 1 then
+                        Nexnet_String("Not Moving", sX, sY - 25 , speedR, speedG, speedB, speedA, 15, 1)
                     else
-                        Nexnet_String("Speed : [" .. newvel .. "m]", sX, sY - 25 , 0, 255, 255, 180, 15, 1);
+                        Nexnet_String("Speed : [" .. newvel .. "m]", sX, sY - 25 , speedR, speedG, speedB, speedA, 15, 1)
                     end
                 end
             end
@@ -873,11 +806,7 @@ end
 
 function onKeyPressed(key)
     if key == 36 then -- HOME KEY (OPENS THE MENU)
-        if pToggle == false then
-            pToggle = true
-        elseif pToggle == true then
-            pToggle = false
-        end
+        pToggle = not pToggle
     end
     -- ONLY FOR DEBUGGING/ADDING SHIT
     --[[
