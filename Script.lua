@@ -3,6 +3,11 @@
 
 
 
+
+
+
+
+
 --[[
     CREDITS :
         @Izodope#9936 - Main Creator
@@ -17,7 +22,7 @@
 pToggle = false -- DO NOT CHANGE THIS VARIABLE
 
 -- ESP Toggles
--- You can change the "false" for each individual one to "true"
+-- You can change the "false" for any of the following variables to "true"
 -- and save the lua file for your preferred default settings
 eventToggle = false
 kegToggle = false
@@ -32,6 +37,9 @@ islandToggle = false
 shipSpeedToggle = false
 
 -- Colors
+-- You can change any of the following variables to whatever color you want in an RGBA format
+-- Make sure you save these to an external file so you can just paste in the code every update
+-- COPY FROM HERE
 fillRGB, fillA = 20, 80 -- Fill Color and Alpha
 borderR, borderG, borderB, borderA = 255, 255, 255, 255 -- Border RGBA
 titleR, titleG, titleB, titleA = 255, 255, 255, 255 -- Title RGBA
@@ -48,9 +56,10 @@ ladderR, ladderG, ladderB, ladderA = 255, 255, 255, 255 -- Ladder RGBA
 islandR, islandG, islandB, islandA = 255, 255, 255, 255 -- Island RGBA
 outpostR, outpostG, outpostB, outpostA = 0, 255, 0, 255 -- Outpost RGBA
 speedR, speedG, speedB, speedA = 255, 255, 255, 255 -- Ship Speed RGBA
+-- TO HERE
 
--- Panel Size and Location
-pX, pY = 1650, 75 -- Change this to change the default location of the menu
+-- Menu Size and Location
+pX, pY = 1650, 75 -- Change this to change the default position of the menu
 oW, oH = 200, 311
 pW, pH = oW, oH
 pCX = pW / 2 + pX
@@ -246,56 +255,58 @@ ladders = -1
 ships = -1
 
 function checkBounds()
-    if mX >= eButtonX and mX <= eButtonX + eButtonW then
-        if mY >= eButtonY and mY <= eButtonY + eButtonH then
-            closeUI()
+    if pToggle == true then
+        if mX >= eButtonX and mX <= eButtonX + eButtonW then
+            if mY >= eButtonY and mY <= eButtonY + eButtonH then
+                closeMain()
+            end
         end
-    end
     
-    if mX >= pX and mX <= pX+oW and mY >= pY and mY <= pY+oH then
-    else
-        closeUI()
-        resetPos = true
-    end
+        if mX >= pX and mX <= pX+oW and mY >= pY and mY <= pY+oH then
+        else
+            closeMain()
+            resetPos = true
+        end
 
-    if mX >= zoneXAlign and mX <= zoneXAlign + 190 then
-        if mY >= zoneL1Y and mY <= zoneL1Y + 18 then
-            eventToggle = not eventToggle
+        if mX >= zoneXAlign and mX <= zoneXAlign + 190 then
+            if mY >= zoneL1Y and mY <= zoneL1Y + 18 then
+                eventToggle = not eventToggle
+  
+            elseif mY >= zoneL2Y and mY <= zoneL2Y + 18 then
+                kegToggle = not kegToggle
+  
+            elseif mY >= zoneL3Y and mY <= zoneL3Y + 18 then
+                chestToggle = not chestToggle
 
-        elseif mY >= zoneL2Y and mY <= zoneL2Y + 18 then
-            kegToggle = not kegToggle
+            elseif mY >= zoneL4Y and mY <= zoneL4Y + 18 then
+                sharkToggle = not sharkToggle
 
-        elseif mY >= zoneL3Y and mY <= zoneL3Y + 18 then
-            chestToggle = not chestToggle
+            elseif mY >= zoneL5Y and mY <= zoneL5Y + 18 then
+                sharkAlertToggle = not sharkAlertToggle
 
-        elseif mY >= zoneL4Y and mY <= zoneL4Y + 18 then
-            sharkToggle = not sharkToggle
+            elseif mY >= zoneL6Y and mY <= zoneL6Y + 18 then
+                mermToggle = not mermToggle
 
-        elseif mY >= zoneL5Y and mY <= zoneL5Y + 18 then
-            sharkAlertToggle = not sharkAlertToggle
-
-        elseif mY >= zoneL6Y and mY <= zoneL6Y + 18 then
-            mermToggle = not mermToggle
-
-        elseif mY >= zoneL7Y and mY <= zoneL7Y + 18 then
-            sirenToggle = not sirenToggle
+            elseif mY >= zoneL7Y and mY <= zoneL7Y + 18 then
+                sirenToggle = not sirenToggle
             
-        elseif mY >= zoneL8Y and mY <= zoneL8Y + 18 then
-            ammoPouchToggle = not ammoPouchToggle
+            elseif mY >= zoneL8Y and mY <= zoneL8Y + 18 then
+                ammoPouchToggle = not ammoPouchToggle
 
-        elseif mY >= zoneL9Y and mY <= zoneL9Y + 18 then
-            ladderToggle = not ladderToggle
+            elseif mY >= zoneL9Y and mY <= zoneL9Y + 18 then
+                ladderToggle = not ladderToggle
 
-        elseif mY >= zoneL10Y and mY <= zoneL10Y + 18 then
-            islandToggle = not islandToggle
+            elseif mY >= zoneL10Y and mY <= zoneL10Y + 18 then
+                islandToggle = not islandToggle
         
-        elseif mY >= zoneL11Y and mY <= zoneL11Y + 18 then
-            shipSpeedToggle = not shipSpeedToggle
+            elseif mY >= zoneL11Y and mY <= zoneL11Y + 18 then
+                shipSpeedToggle = not shipSpeedToggle
+            end
         end
     end
 end
 
-function closeUI()
+function closeMain()
     Nexnet_Input(false)
     Nexnet_DisableUI(false)
     pToggle = false
