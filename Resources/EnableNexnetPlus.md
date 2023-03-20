@@ -15,7 +15,7 @@
   10. Enjoy
 
 ## Advanced Customization :
-  - [How to Edit Colors](https://github.com/Izoee/NexnetPlus/blob/main/EditColors.md)
+  - [How to Edit Colors](https://github.com/Izoee/NexnetPlus/blob/main/Resources/EditColors.md)
 
 ## WARNING :
 - **You MUST open an in-game Menu before opening the Nexnet+ Menu or your cursor will not be visible.**
