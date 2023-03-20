@@ -14,6 +14,13 @@
 9. Press the HOME key to open Nexnet+
 10. Enjoy
 
+## How to use custom colors
+1. Open the lua file in Notepad.
+2. Press CTRL+F and search for "-- Colors" without the ""
+3. Change any of the color values except the fill color and alpha. You can generate color codes [here](https://rgbacolorpicker.com/).
+5. Save the lua file.
+6. Copy the entire block of code after you change it into a separate text file so you can paste it over the original block whenever I update.
+
 ## WARNING :
 - **You MUST open an in-game Menu before opening the Nexnet+ Menu or your cursor will not be visible.**
   - You can fix this by clicking anywhere on the screen to close the Nexnet+ Menu and reset it to its default position.
