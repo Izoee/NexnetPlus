@@ -1,8 +1,8 @@
 # Nexnet+ 
 
-![alt text](https://github.com/Izoee/NexnetPlus/blob/main/displayImage.png?raw=true)  
-Current Version : 1.1.5 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/changelog.md)
-### [Download and Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/EnableNexnetPlus.md)
+![alt text](https://github.com/Izoee/NexnetPlus/blob/main/Resources/displayImage.png?raw=true)  
+Current Version : 1.1.5 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/Resources/changelog.md)
+### [Download and Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/Resources/EnableNexnetPlus.md)
 
 #### Features :
 - **Moveable Menu** - (Click and drag the Nexnet+ title bar)
