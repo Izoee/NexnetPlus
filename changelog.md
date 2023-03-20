@@ -1,4 +1,9 @@
 ## Changes
+- **1.1.5**
+  + Removed the Megalodon because it was causing issues when used with the Shark and Shark Alert functions
+  + Shark Alert will is no longer visible when you are out of the water except when you are on the bottom deck of a ship
+  + Islands that are between 2500m and 3500m from you are now less opaque than islands 2500m or closer
+  + Optimized toggle functions
 - **1.1.4**
   + Optimised the Menu background
   + Condensed Island location variables
