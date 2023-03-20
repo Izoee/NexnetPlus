@@ -1,6 +1,6 @@
 ## Changes
 - **1.1.4**
-  + Optimised Menu fill code
+  + Optimised the Menu background
   + Condensed Island location variables
 - **1.1.3**
   + Added the Ghost Fleet Event to the World Events ESP
