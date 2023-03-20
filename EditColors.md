@@ -4,3 +4,4 @@
   1. Open your Script.lua file in Notepad
   2. Press CTRL+F and search for "-- COPY FROM HERE" without the ""
   3. You should see something like this :
+    ![alt text](https://github.com/Izoee/NexnetPlus/blob/main/colorsCode.png?raw=true)
