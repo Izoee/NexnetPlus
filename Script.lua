@@ -39,7 +39,7 @@ movingMenu = false
 
 -- Panel Size and Location
 pX, pY = 1650, 75 -- Change this to change the default location of the menu
-oW, oH = 200, 335
+oW, oH = 200, 331
 pW, pH = oW, oH
 pCX = pW / 2 + pX
 pCY = pH / 2 + pY
@@ -107,10 +107,12 @@ zoneL12Y = l12RectY - 4
 leftDown = false
 
 -- Colors
-fA = 128 -- Fill Transparency
-fC = 10 -- Fill Color
-bR, bG, bB, bA = 255, 255, 255, 255 -- Border RGB
-tR, tG, tB, tA = 255, 255, 255, 255 -- Text RGBA]
+fA = 80 -- Fill Transparency
+fC = 20 -- Fill Color
+bR, bG, bB, bA = 255, 255, 255, 255 -- Border RGBA
+tR, tG, tB, tA = 255, 255, 255, 255 -- Text RGBA
+iR, iG, iB, iA = 255, 255, 255, 255 -- Island RGBA
+oR, oG, oB, oA = 0, 255, 0, 255 -- Outpost RGBA
 
 -- Island Arrays
 islandX = {}
@@ -118,331 +120,114 @@ islandY = {}
 islandZConst = 15000
 islandN = {}
 
-iR, iG, iB, iA = 255, 255, 255, 255
-oR, oG, oB, oA = 0, 255, 0, 255
-
 -- Declare Island Info
-islandX[0] = 497395
-islandY[0] = -327061
-islandN[0] = 'Traitors Fate Forteress'
-islandX[1] = 387505
-islandY[1] = -304825
-islandN[1] = 'Plunderers Plight'
-islandX[2] = 446022
-islandY[2] = -206311
-islandN[2] = 'Galleons Grave Outpost'
-islandX[3] = 300976
-islandY[3] = -233652
-islandN[3] = 'Sunken Grove'
-islandX[4] = 441512
-islandY[4] = -369299
-islandN[4] = 'Black Water Enclave'
-islandX[5] = 336077
-islandY[5] = -117935
-islandN[5] = 'Skull Keep'
-islandX[6] = 432052
-islandY[6] = -90803
-islandN[6] = 'Tri-Rock Isle'
-islandX[7] = 499368
-islandY[7] = -36450
-islandN[7] = 'Liars Backbone'
-islandX[8] = 507858
-islandY[8] = -101328
-islandN[8] = 'Three Paces East Seapost'
-islandX[9] = 680209
-islandY[9] = 28414
-islandN[9] = 'Flintlock Peninsula'
-islandX[10] = 377950
-islandY[10] = -460878
-islandN[10] = 'Marauders Arch '
-islandX[11] = 443559
-islandY[11] = 62449
-islandN[11] = 'Krakens Fall'
-islandX[12] = 140510
-islandY[12] = -64866
-islandN[12] = 'Shipwreck Bay'
-islandX[13] = 151885
-islandY[13] = -217786
-islandN[13] = 'Dagger Tooth Outpost'
-islandX[14] = 244097
-islandY[14] = -138150
-islandN[14] = 'Isle of Last Words'
-islandX[15] = 167832
-islandY[15] = -400381
-islandN[15] = 'Old Faithful Isle'
-islandX[16] = 381084
-islandY[16] = -362667
-islandN[16] = 'Shrine of Hungering'
-islandX[17] = 308923
-islandY[17] = -359532
-islandN[17] = 'Shark Fin Camp'
-islandX[18] = 267942
-islandY[18] = -397816
-islandN[18] = 'Wild Treasure Store'
-islandX[19] = 225601
-islandY[19] = -313671
-islandN[19] = 'Blind Man Lagoon'
-islandX[20] = 68944
-islandY[20] = -316121
-islandN[20] = 'Krakens Watch Tower'
-islandX[21] = -45347
-islandY[21] = -326147
-islandN[21] = 'Royal Crest Fortress'
-islandX[22] = 31092
-islandY[22] = -414643
-islandN[22] = 'Scurvey Isley'
-islandX[23] = 98942
-islandY[23] = -469294
-islandN[23] = 'Treasury of the Secret Wilds'
-islandX[24] = 269829
-islandY[24] = -451366
-islandN[24] = 'Black Sand Atoll'
-islandX[25] = -91772
-islandY[25] = -207283
-islandN[25] = 'Hidden Spring Keep'
-islandX[26] = 14876
-islandY[26] = -141302
-islandN[26] = 'K9 Isle'
-islandX[27] = -155339
-islandY[27] = -307117
-islandN[27] = 'Lone Cove'
-islandX[28] = -183245
-islandY[28] = -388273
-islandN[28] = 'Shrine of the Coral Tomb'
-islandX[29] = -198353
-islandY[29] = -447625
-islandN[29] = 'Salty Sands'
-islandX[30] = -110660
-islandY[30] = -408053
-islandN[30] = 'Picaroon Palms'
-islandX[31] = -307407
-islandY[31] = -467892
-islandN[31] = 'Smugglers Bay'
-islandX[32] = -249297
-islandY[32] = -369388
-islandN[32] = 'Boulder Cay'
-islandX[33] = -376311
-islandY[33] = -377337
-islandN[33] = 'Sandy Shallows'
-islandX[34] = -295343
-islandY[34] = -260705
-islandN[34] = 'Sanctuary Outpost'
-islandX[35] = -442964
-islandY[35] = -281912
-islandN[35] = 'Keel Haul Fort'
-islandX[36] = -488360
-islandY[36] = -396989
-islandN[36] = 'Sailors Bounty'
-islandX[37] = -436438
-islandY[37] = -499281
-islandN[37] = 'Treasury of Sunken Shores'
-islandX[38] = -500797
-islandY[38] = -245909
-islandN[38] = 'Spoils of Plenty Store'
-islandX[39] = -396814
-islandY[39] = -185474
-islandN[39] = 'Rapier Cay'
-islandX[40] = -502584
-islandY[40] = -130358
-islandN[40] = 'Crescent Isle'
-islandX[41] = -390068
-islandY[41] = -55461
-islandN[41] = 'New Golden Sands Outpost'
-islandX[42] = -495854
-islandY[42] = -11818
-islandN[42] = 'Sea Dogs Rest'
-islandX[43] = -550529
-islandY[43] = -14183
-islandN[43] = 'Imperial Crown Fortress'
-islandX[44] = -504272
-islandY[44] = 97442
-islandN[44] = 'Mermaids Hideaway'
-islandX[45] = -395572
-islandY[45] = 60912
-islandN[45] = 'Lagoon of Whispers'
-islandX[46] = -89466
-islandY[46] = 49335
-islandN[46] = 'Reapers Hideout'
-islandX[47] = -268149
-islandY[47] = 55395
-islandN[47] = 'Wanderers Refuge'
-islandX[48] = -247097
-islandY[48] = -96161
-islandN[48] = 'Cannon Cove'
-islandX[49] = -197773
-islandY[49] = -200711
-islandN[49] = 'Lonely Isle'
-islandX[50] = -141763
-islandY[50] = -117577
-islandN[50] = 'Rum Runner Isle'
-islandX[51] = -149912
-islandY[51] = -61976
-islandN[51] = 'North Star Sea Post'
-islandX[52] = -176038
-islandY[52] = -14527
-islandN[52] = 'Twin Groves'
-islandX[53] = 30789
-islandY[53] = 15754
-islandN[53] = 'Sea Dogs Tavern'
-islandX[54] = 187330
-islandY[54] = 8591
-islandN[54] = 'Shrine of Flooded Embrace'
-islandX[55] = 266789
-islandY[55] = -17657
-islandN[55] = 'Crooked Mast'
-islandX[56] = 376462
-islandY[56] = -19008
-islandN[56] = 'Shiver Retreat'
-islandX[57] = 335006
-islandY[57] = 67601
-islandN[57] = 'Shark Tooth Key'
-islandX[58] = 341037
-islandY[58] = 141763
-islandN[58] = 'Mercys End Fortress'
-islandX[59] = 341037
-islandY[59] = 141763
-islandN[59] = 'N13'
-islandX[60] = 681414
-islandY[60] = 30865
-islandN[60] = 'Fetchers Rest'
-islandX[61] = 847028
-islandY[61] = 24400
-islandN[61] = 'Brians Bazaar'
-islandX[62] = 916428
-islandY[62] = 4520
-islandN[62] = 'Molten Sands Fortress'
-islandX[63] = 836805
-islandY[63] = 93693
-islandN[63] = 'Cursewater Shores'
-islandX[64] = 862088
-islandY[64] = 263623
-islandN[64] = 'Rubys Fall'
-islandX[65] = 695105
-islandY[65] = 322347
-islandN[65] = 'Morrows Peak Outpost'
-islandX[66] = 596063
-islandY[66] = 262161
-islandN[66] = 'Forsaken Brink'
-islandX[67] = 619397
-islandY[67] = 168321
-islandN[67] = 'Cinder Islet'
-islandX[68] = 830881
-islandY[68] = 394511
-islandN[68] = 'Brimstone Rock'
-islandX[69] = 940301
-islandY[69] = 407962
-islandN[69] = 'Glowstone Cay'
-islandX[70] = 879758
-islandY[70] = 506121
-islandN[70] = 'Magmas Tide'
-islandX[71] = 757005
-islandY[71] = 546313
-islandN[71] = 'Devils Thirst'
-islandX[72] = 611017
-islandY[72] = 564837
-islandN[72] = 'Roaring Sands'
-islandX[73] = 670707
-islandY[73] = 656844
-islandN[73] = 'Ashen Reaches'
-islandX[74] = 325006
-islandY[74] = 452559
-islandN[74] = 'Devils Ridge'
-islandX[75] = 242891
-islandY[75] = 346706
-islandN[75] = 'Crows Nest Fortress'
-islandX[76] = 211099
-islandY[76] = 444881
-islandN[76] = 'Mutineer Rock'
-islandX[77] = 187170
-islandY[77] = 502692
-islandN[77] = 'Shrine of Ancient Tears'
-islandX[78] = 109205
-islandY[78] = 480884
-islandN[78] = 'Thieves Haven'
-islandX[79] = 24384
-islandY[79] = 568480
-islandN[79] = 'Old Brinstone Fortress'
-islandX[80] = 4912
-islandY[80] = 512632
-islandN[80] = 'Booty isle'
-islandX[81] = 605728
-islandY[81] = 470883
-islandN[81] = 'Roaring Traders'
-islandX[82] = 700238
-islandY[82] = 459892
-islandN[82] = 'Flames End'
-islandX[83] = 369477
-islandY[83] = 313845
-islandN[83] = 'Ancient Spire Outpost'
-islandX[84] = 146760
-islandY[84] = 371368
-islandN[84] = 'Cutlass Cay'
-islandX[85] = 78968
-islandY[85] = 319956
-islandN[85] = 'Paradise Spring'
-islandX[86] = -18130
-islandY[86] = 381961
-islandN[86] = 'Plunder Outpost'
-islandX[87] = -77747
-islandY[87] = 481468
-islandN[87] = 'Lookout Point'
-islandX[88] = -179137
-islandY[88] = 456515
-islandN[88] = 'Shark Bait Cove'
-islandX[89] = -212180
-islandY[89] = 382002
-islandN[89] = 'Shrine of Tribute'
-islandX[90] = -140227
-islandY[90] = 338323
-islandN[90] = 'Lost Gold Fort'
-islandX[91] = -265455
-islandY[91] = 332385
-islandN[91] = 'The Finest Trading Post'
-islandX[92] = -290473
-islandY[92] = 400309
-islandN[92] = 'Old Salts Atoll'
-islandX[93] = -300255
-islandY[93] = 460275
-islandN[93] = 'Ancient Gold Fortress'
-islandX[94] = -361703
-islandY[94] = 313736
-islandN[94] = 'Discovery Rigde'
-islandX[95] = -241502
-islandY[95] = 255960
-islandN[95] = 'Plunder Valley'
-islandX[96] = -351128
-islandY[96] = 160700
-islandN[96] = 'Sailors Knot Stronghold'
-islandX[97] = -424639
-islandY[97] = 150931
-islandN[97] = 'Shrine of Oceans Fortune'
-islandX[98] = -157242
-islandY[98] = 176150
-islandN[98] = 'Treasury of the Lost Ancients'
-islandX[99] = 5222
-islandY[99] = 238993
-islandN[99] = 'Snake Isle'
-islandX[100] = -106153
-islandY[100] = 242422
-islandN[100] = 'Chicken Isle'
-islandX[101] = 71001
-islandY[101] = 232711
-islandN[101] = 'Stephens Spoils'
-islandX[102] = 94017
-islandY[102] = 155428
-islandN[102] = 'Fort of the Damned'
-islandX[103] = -6017
-islandY[103] = 129194
-islandN[103] = 'Castaway Isle'
-islandX[104] = -88283
-islandY[104] = 155235
-islandN[104] = 'Fools Lagoon'
-islandX[105] = 163885
-islandY[105] = 246305
-islandN[105] = 'Crooks Hollow'
-islandX[106] = 275365
-islandY[106] = 231924
-islandN[106] = 'Barnacle Cay'
+islandX[0] = 497395; islandY[0] = -327061; islandN[0] = 'Traitors Fate Forteress'
+islandX[1] = 387505; islandY[1] = -304825; islandN[1] = 'Plunderers Plight'
+islandX[2] = 446022; islandY[2] = -206311; islandN[2] = 'Galleons Grave Outpost'
+islandX[3] = 300976; islandY[3] = -233652; islandN[3] = 'Sunken Grove'
+islandX[4] = 441512; islandY[4] = -369299; islandN[4] = 'Black Water Enclave'
+islandX[5] = 336077; islandY[5] = -117935; islandN[5] = 'Skull Keep'
+islandX[6] = 432052; islandY[6] = -90803; islandN[6] = 'Tri-Rock Isle'
+islandX[7] = 499368; islandY[7] = -36450; islandN[7] = 'Liars Backbone'
+islandX[8] = 507858; islandY[8] = -101328; islandN[8] = 'Three Paces East Seapost'
+islandX[9] = 680209; islandY[9] = 28414; islandN[9] = 'Flintlock Peninsula'
+islandX[10] = 377950; islandY[10] = -460878; islandN[10] = 'Marauders Arch '
+islandX[11] = 443559; islandY[11] = 62449; islandN[11] = 'Krakens Fall'
+islandX[12] = 140510; islandY[12] = -64866; islandN[12] = 'Shipwreck Bay'
+islandX[13] = 151885; islandY[13] = -217786; islandN[13] = 'Dagger Tooth Outpost'
+islandX[14] = 244097; islandY[14] = -138150; islandN[14] = 'Isle of Last Words'
+islandX[15] = 167832; islandY[15] = -400381; islandN[15] = 'Old Faithful Isle'
+islandX[16] = 381084; islandY[16] = -362667; islandN[16] = 'Shrine of Hungering'
+islandX[17] = 308923; islandY[17] = -359532; islandN[17] = 'Shark Fin Camp'
+islandX[18] = 267942; islandY[18] = -397816; islandN[18] = 'Wild Treasure Store'
+islandX[19] = 225601; islandY[19] = -313671; islandN[19] = 'Blind Man Lagoon'
+islandX[20] = 68944; islandY[20] = -316121; islandN[20] = 'Krakens Watch Tower'
+islandX[21] = -45347; islandY[21] = -326147; islandN[21] = 'Royal Crest Fortress'
+islandX[22] = 31092; islandY[22] = -414643; islandN[22] = 'Scurvey Isley'
+islandX[23] = 98942; islandY[23] = -469294; islandN[23] = 'Treasury of the Secret Wilds'
+islandX[24] = 269829; islandY[24] = -451366; islandN[24] = 'Black Sand Atoll'
+islandX[25] = -91772; islandY[25] = -207283; islandN[25] = 'Hidden Spring Keep'
+islandX[26] = 14876; islandY[26] = -141302; islandN[26] = 'K9 Isle'
+islandX[27] = -155339; islandY[27] = -307117; islandN[27] = 'Lone Cove'
+islandX[28] = -183245; islandY[28] = -388273; islandN[28] = 'Shrine of the Coral Tomb'
+islandX[29] = -198353; islandY[29] = -447625; islandN[29] = 'Salty Sands'
+islandX[30] = -110660; islandY[30] = -408053; islandN[30] = 'Picaroon Palms'
+islandX[31] = -307407; islandY[31] = -467892; islandN[31] = 'Smugglers Bay'
+islandX[32] = -249297; islandY[32] = -369388; islandN[32] = 'Boulder Cay'
+islandX[33] = -376311; islandY[33] = -377337; islandN[33] = 'Sandy Shallows'
+islandX[34] = -295343; islandY[34] = -260705; islandN[34] = 'Sanctuary Outpost'
+islandX[35] = -442964; islandY[35] = -281912; islandN[35] = 'Keel Haul Fort'
+islandX[36] = -488360; islandY[36] = -396989; islandN[36] = 'Sailors Bounty'
+islandX[37] = -436438; islandY[37] = -499281; islandN[37] = 'Treasury of Sunken Shores'
+islandX[38] = -500797; islandY[38] = -245909; islandN[38] = 'Spoils of Plenty Store'
+islandX[39] = -396814; islandY[39] = -185474; islandN[39] = 'Rapier Cay'
+islandX[40] = -502584; islandY[40] = -130358; islandN[40] = 'Crescent Isle'
+islandX[41] = -390068; islandY[41] = -55461; islandN[41] = 'New Golden Sands Outpost'
+islandX[42] = -495854; islandY[42] = -11818; islandN[42] = 'Sea Dogs Rest'
+islandX[43] = -550529; islandY[43] = -14183; islandN[43] = 'Imperial Crown Fortress'
+islandX[44] = -504272; islandY[44] = 97442; islandN[44] = 'Mermaids Hideaway'
+islandX[45] = -395572; islandY[45] = 60912; islandN[45] = 'Lagoon of Whispers'
+islandX[46] = -89466; islandY[46] = 49335; islandN[46] = 'Reapers Hideout'
+islandX[47] = -268149; islandY[47] = 55395; islandN[47] = 'Wanderers Refuge'
+islandX[48] = -247097; islandY[48] = -96161; islandN[48] = 'Cannon Cove'
+islandX[49] = -197773; islandY[49] = -200711; islandN[49] = 'Lonely Isle'
+islandX[50] = -141763; islandY[50] = -117577; islandN[50] = 'Rum Runner Isle'
+islandX[51] = -149912; islandY[51] = -61976; islandN[51] = 'North Star Sea Post'
+islandX[52] = -176038; islandY[52] = -14527; islandN[52] = 'Twin Groves'
+islandX[53] = 30789; islandY[53] = 15754; islandN[53] = 'Sea Dogs Tavern'
+islandX[54] = 187330; islandY[54] = 8591; islandN[54] = 'Shrine of Flooded Embrace'
+islandX[55] = 266789; islandY[55] = -17657; islandN[55] = 'Crooked Mast'
+islandX[56] = 376462; islandY[56] = -19008; islandN[56] = 'Shiver Retreat'
+islandX[57] = 335006; islandY[57] = 67601; islandN[57] = 'Shark Tooth Key'
+islandX[58] = 341037; islandY[58] = 141763; islandN[58] = 'Mercys End Fortress'
+islandX[59] = 341037; islandY[59] = 141763; islandN[59] = 'N13'
+islandX[60] = 681414; islandY[60] = 30865; islandN[60] = 'Fetchers Rest'
+islandX[61] = 847028; islandY[61] = 24400; islandN[61] = 'Brians Bazaar'
+islandX[62] = 916428; islandY[62] = 4520; islandN[62] = 'Molten Sands Fortress'
+islandX[63] = 836805; islandY[63] = 93693; islandN[63] = 'Cursewater Shores'
+islandX[64] = 862088; islandY[64] = 263623; islandN[64] = 'Rubys Fall'
+islandX[65] = 695105; islandY[65] = 322347; islandN[65] = 'Morrows Peak Outpost'
+islandX[66] = 596063; islandY[66] = 262161; islandN[66] = 'Forsaken Brink'
+islandX[67] = 619397; islandY[67] = 168321; islandN[67] = 'Cinder Islet'
+islandX[68] = 830881; islandY[68] = 394511; islandN[68] = 'Brimstone Rock'
+islandX[69] = 940301; islandY[69] = 407962; islandN[69] = 'Glowstone Cay'
+islandX[70] = 879758; islandY[70] = 506121; islandN[70] = 'Magmas Tide'
+islandX[71] = 757005; islandY[71] = 546313; islandN[71] = 'Devils Thirst'
+islandX[72] = 611017; islandY[72] = 564837; islandN[72] = 'Roaring Sands'
+islandX[73] = 670707; islandY[73] = 656844; islandN[73] = 'Ashen Reaches'
+islandX[74] = 325006; islandY[74] = 452559; islandN[74] = 'Devils Ridge'
+islandX[75] = 242891; islandY[75] = 346706; islandN[75] = 'Crows Nest Fortress'
+islandX[76] = 211099; islandY[76] = 444881; islandN[76] = 'Mutineer Rock'
+islandX[77] = 187170; islandY[77] = 502692; islandN[77] = 'Shrine of Ancient Tears'
+islandX[78] = 109205; islandY[78] = 480884; islandN[78] = 'Thieves Haven'
+islandX[79] = 24384; islandY[79] = 568480; islandN[79] = 'Old Brinstone Fortress'
+islandX[80] = 4912; islandY[80] = 512632; islandN[80] = 'Booty isle'
+islandX[81] = 605728; islandY[81] = 470883; islandN[81] = 'Roaring Traders'
+islandX[82] = 700238; islandY[82] = 459892; islandN[82] = 'Flames End'
+islandX[83] = 369477; islandY[83] = 313845; islandN[83] = 'Ancient Spire Outpost'
+islandX[84] = 146760; islandY[84] = 371368; islandN[84] = 'Cutlass Cay'
+islandX[85] = 78968; islandY[85] = 319956; islandN[85] = 'Paradise Spring'
+islandX[86] = -18130; islandY[86] = 381961; islandN[86] = 'Plunder Outpost'
+islandX[87] = -77747; islandY[87] = 481468; islandN[87] = 'Lookout Point'
+islandX[88] = -179137; islandY[88] = 456515; islandN[88] = 'Shark Bait Cove'
+islandX[89] = -212180; islandY[89] = 382002; islandN[89] = 'Shrine of Tribute'
+islandX[90] = -140227; islandY[90] = 338323; islandN[90] = 'Lost Gold Fort'
+islandX[91] = -265455; islandY[91] = 332385; islandN[91] = 'The Finest Trading Post'
+islandX[92] = -290473; islandY[92] = 400309; islandN[92] = 'Old Salts Atoll'
+islandX[93] = -300255; islandY[93] = 460275; islandN[93] = 'Ancient Gold Fortress'
+islandX[94] = -361703; islandY[94] = 313736; islandN[94] = 'Discovery Rigde'
+islandX[95] = -241502; islandY[95] = 255960; islandN[95] = 'Plunder Valley'
+islandX[96] = -351128; islandY[96] = 160700; islandN[96] = 'Sailors Knot Stronghold'
+islandX[97] = -424639; islandY[97] = 150931; islandN[97] = 'Shrine of Oceans Fortune'
+islandX[98] = -157242; islandY[98] = 176150; islandN[98] = 'Treasury of the Lost Ancients'
+islandX[99] = 5222; islandY[99] = 238993; islandN[99] = 'Snake Isle'
+islandX[100] = -106153; islandY[100] = 242422; islandN[100] = 'Chicken Isle'
+islandX[101] = 71001; islandY[101] = 232711; islandN[101] = 'Stephens Spoils'
+islandX[102] = 94017; islandY[102] = 155428; islandN[102] = 'Fort of the Damned'
+islandX[103] = -6017; islandY[103] = 129194; islandN[103] = 'Castaway Isle'
+islandX[104] = -88283; islandY[104] = 155235; islandN[104] = 'Fools Lagoon'
+islandX[105] = 163885; islandY[105] = 246305; islandN[105] = 'Crooks Hollow'
+islandX[106] = 275365; islandY[106] = 231924; islandN[106] = 'Barnacle Cay'
 
 
 -- Classes
@@ -710,105 +495,9 @@ function onRenderEvent()
         end
 
         -- FILL
-        Nexnet_Line(pX + 2, pY + 1, pX + 2, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 4, pY + 1, pX + 4, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 6, pY + 1, pX + 6, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 8, pY + 1, pX + 8, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 10, pY + 1, pX + 10, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 12, pY + 1, pX + 12, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 14, pY + 1, pX + 14, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 16, pY + 1, pX + 16, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 18, pY + 1, pX + 18, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 20, pY + 1, pX + 20, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 22, pY + 1, pX + 22, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 24, pY + 1, pX + 24, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 26, pY + 1, pX + 26, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 28, pY + 1, pX + 28, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 30, pY + 1, pX + 30, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 32, pY + 1, pX + 32, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 34, pY + 1, pX + 34, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 36, pY + 1, pX + 36, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 38, pY + 1, pX + 38, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 40, pY + 1, pX + 40, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 42, pY + 1, pX + 42, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 44, pY + 1, pX + 44, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 46, pY + 1, pX + 46, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 48, pY + 1, pX + 48, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 50, pY + 1, pX + 50, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 52, pY + 1, pX + 52, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 54, pY + 1, pX + 54, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 56, pY + 1, pX + 56, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 58, pY + 1, pX + 58, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 60, pY + 1, pX + 60, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 62, pY + 1, pX + 62, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 64, pY + 1, pX + 64, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 66, pY + 1, pX + 66, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 68, pY + 1, pX + 68, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 70, pY + 1, pX + 70, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 72, pY + 1, pX + 72, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 74, pY + 1, pX + 74, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 76, pY + 1, pX + 76, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 78, pY + 1, pX + 78, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 80, pY + 1, pX + 80, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 82, pY + 1, pX + 82, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 84, pY + 1, pX + 84, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 86, pY + 1, pX + 86, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 88, pY + 1, pX + 88, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 90, pY + 1, pX + 90, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 92, pY + 1, pX + 92, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 94, pY + 1, pX + 94, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 96, pY + 1, pX + 96, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 98, pY + 1, pX + 98, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 100, pY + 1, pX + 100, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 102, pY + 1, pX + 102, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 104, pY + 1, pX + 104, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 106, pY + 1, pX + 106, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 108, pY + 1, pX + 108, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 110, pY + 1, pX + 110, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 112, pY + 1, pX + 112, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 114, pY + 1, pX + 114, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 116, pY + 1, pX + 116, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 118, pY + 1, pX + 118, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 120, pY + 1, pX + 120, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 122, pY + 1, pX + 122, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 124, pY + 1, pX + 124, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 126, pY + 1, pX + 126, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 128, pY + 1, pX + 128, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 130, pY + 1, pX + 130, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 132, pY + 1, pX + 132, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 134, pY + 1, pX + 134, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 136, pY + 1, pX + 136, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 138, pY + 1, pX + 138, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 140, pY + 1, pX + 140, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 142, pY + 1, pX + 142, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 144, pY + 1, pX + 144, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 146, pY + 1, pX + 146, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 148, pY + 1, pX + 148, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 150, pY + 1, pX + 150, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 152, pY + 1, pX + 152, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 154, pY + 1, pX + 154, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 156, pY + 1, pX + 156, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 158, pY + 1, pX + 158, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 160, pY + 1, pX + 160, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 162, pY + 1, pX + 162, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 164, pY + 1, pX + 164, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 166, pY + 1, pX + 166, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 168, pY + 1, pX + 168, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 170, pY + 1, pX + 170, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 172, pY + 1, pX + 172, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 174, pY + 1, pX + 174, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 176, pY + 1, pX + 176, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 178, pY + 1, pX + 178, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 180, pY + 1, pX + 180, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 182, pY + 1, pX + 182, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 184, pY + 1, pX + 184, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 186, pY + 1, pX + 186, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 188, pY + 1, pX + 188, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 190, pY + 1, pX + 190, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 192, pY + 1, pX + 192, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 194, pY + 1, pX + 194, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 196, pY + 1, pX + 196, pY + pH, fC, fC, fC, fA)
-        Nexnet_Line(pX + 198, pY + 1, pX + 198, pY + pH, fC, fC, fC, fA)
+        for i = oW - 2, 2, -1 do
+            Nexnet_Line(pX + i, pY + 1, pX + i, pY + pH, fC, fC, fC, fA)
+        end
         
         -- MENU
         Nexnet_Line(pCX + 100, divider, pCX - 100, divider, bR, bG, bB, bA)
@@ -904,7 +593,7 @@ function onRenderEvent()
 
         Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, tR, tB, tG, tA)
         Nexnet_String("Close", eBCX, eBCY, tR, tB, tG, tA, 15, 0)
-        Nexnet_String("v1.1.3", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
+        Nexnet_String("v1.1.4", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
     end
 
     -- BACKEND
