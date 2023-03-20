@@ -49,11 +49,6 @@ islandR, islandG, islandB, islandA = 255, 255, 255, 255 -- Island RGBA
 outpostR, outpostG, outpostB, outpostA = 0, 255, 0, 255 -- Outpost RGBA
 speedR, speedG, speedB, speedA = 255, 255, 255, 255 -- Ship Speed RGBA
 
--- Mouse Position
-mX, mY = 0, 0
-cMX, cMY = 0, 0
-movingMenu = false
-
 -- Panel Size and Location
 pX, pY = 1650, 75 -- Change this to change the default location of the menu
 oW, oH = 200, 311
@@ -117,16 +112,19 @@ eButtonH = 25
 eBCX = eButtonW / 2 + eButtonX
 eBCY = eButtonH / 2 + eButtonY - 8
 
--- Clicks
+-- Mouse Stuff
 leftDown = false
+mX, mY = 0, 0
+cMX, cMY = 0, 0
+movingMenu = false
 
--- Island Arrays
+-- Declare Island Info Arrays
 islandX = {}
 islandY = {}
 islandZConst = 15000
 islandN = {}
 
--- Island Info
+-- Island Info | Credit: @Juke#7394
 islandX[0] = 497395; islandY[0] = -327061; islandN[0] = 'Traitors Fate Forteress'
 islandX[1] = 387505; islandY[1] = -304825; islandN[1] = 'Plunderers Plight'
 islandX[2] = 446022; islandY[2] = -206311; islandN[2] = 'Galleons Grave Outpost'
@@ -248,7 +246,6 @@ ladders = -1
 ships = -1
 
 function checkBounds()
-    -- Toggles
     if mX >= eButtonX and mX <= eButtonX + eButtonW then
         if mY >= eButtonY and mY <= eButtonY + eButtonH then
             closeUI()
@@ -748,7 +745,9 @@ function onRenderEvent()
                         -- Nexnet_String(name.." ["..dist.."m]", sX, sY, 255, 255, 255, 255, 15, 1)
                         if name == "BP_SmallShipLadder_C" or  name == "BP_SmallShipLadder_02_C" or name == "BP_MediumShipLadder_C" or name == "BP_MediumShipLadder_02_C" or name == "BP_LargeShipLadder_C" or name == "BP_LargeShipLadder_02_C" then
                             if dist < 75 then
-                                Nexnet_String("Ladder".." ["..dist.."m]", sX, sY, ladderR, ladderG, ladderB, ladderA, 15, 1)
+                                if posZ <= z + 50 then
+                                    Nexnet_String("Ladder".." ["..dist.."m]", sX, sY, ladderR, ladderG, ladderB, ladderA, 15, 1)
+                                end
                             end
                         end
                     end
