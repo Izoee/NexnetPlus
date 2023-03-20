@@ -1,7 +1,7 @@
 # Nexnet+ 
 
 ![alt text](https://github.com/Izoee/NexnetPlus/blob/main/NexnetPlusDisplay.png?raw=true)  
-Current Version : 1.1.4 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/changelog.md)
+Current Version : 1.1.5 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/changelog.md)
 ### [Download and Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/EnableNexnetPlus.md)
 
 #### Features :
@@ -11,7 +11,6 @@ Current Version : 1.1.4 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - Athena Chest ESP
 - Shark ESP
 - Shark Alert
-- Megalodon ESP
 - Mermaid ESP
 - Siren ESP
 - Ammo Pouch ESP
