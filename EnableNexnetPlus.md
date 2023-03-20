@@ -15,12 +15,21 @@
 10. Enjoy
 
 ## How to edit Colors (ADVANCED) :
+**IF YOU CRASH, REDOWNLOAD NEXNET+ AND TRY AGAIN... or don't, I'm not your dad.**
+### First Time :
 1. Open the lua file in Notepad.
 2. Press CTRL+F and search for "-- COPY FROM HERE" without the ""
 3. Change any of the color values except the Fill Color and Fill Alpha to whatever you want. 
 4. You can generate color codes [here](https://rgbacolorpicker.com/).
 5. Save the lua file.
-6. Copy the block of code for colors into a separate text file after you change it so you can paste it over the original block whenever I update.
+6. Copy everything between "-- COPY FROM HERE" and "-- TO HERE" and paste it into a new text file after you make your changes.
+
+### After you download updates :
+1. Do step 1 and step 2 of the "First Time" section.
+2. Replace everything between the "-- COPY FROM HERE" to "-- TO HERE" with the contents of the text file you made in step 6 of the "First Time" section.
+3. Save the LUA
+
+### DO NOT MESSAGE ME ABOUT EDITING COLORS. It's not my problem if you can't understand instructions.
 
 ## WARNING :
 - **You MUST open an in-game Menu before opening the Nexnet+ Menu or your cursor will not be visible.**
