@@ -28,4 +28,4 @@
   - **X.Y.Z**
     + **X** - Major Feature Update
     + **Y** - Minor Feature Update
-    + **Z** - Bug Fix/Feature Tweaks
+    + **Z** - Bug Fixes & Feature Tweaks
