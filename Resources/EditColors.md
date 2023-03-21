@@ -1,6 +1,6 @@
 ## Editing ESP/Menu Colors (ADVANCED) :
 ### DO NOT MESSAGE ME ABOUT EDITING COLORS. It's not my problem you can't read instructions.
-  1. Open your Script.lua file in Notepad or preferrably Visual Studio Code or ZeroBrane
+  1. Open your Script.lua file in Notepad or preferrably [ZeroBrane](https://studio.zerobrane.com/download?not-this-time) or [Visual Studio Code](https://code.visualstudio.com/download)
   2. Press CTRL+F and search for "**-- COPY FROM HERE**" without the ""
   3. You should see something like this :  
     ![alt text](https://github.com/Izoee/NexnetPlus/blob/main/Resources/colorsCode.png?raw=true)
