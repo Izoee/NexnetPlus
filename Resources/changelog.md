@@ -5,9 +5,11 @@
   + Ladder ESP is no longer visible when you are out of the water except while below deck on a ship
   + Islands that are between 2500m and 3500m from you are now less opaque than islands 2500m or closer
   + Optimized toggle functions
+  + Reduced the code by 100 lines
 - **1.1.4**
   + Optimised the Menu background
   + Condensed Island location variables
+  + Reduced the code by 300 lines
 - **1.1.3**
   + Added the Ghost Fleet Event to the World Events ESP
 - **1.1.2**
