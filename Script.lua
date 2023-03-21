@@ -1,13 +1,6 @@
 -- HOME - Opens the menu
 -- CLICK ANYWHERE OTHER THAN THE MENU - Closes the menu and resets its position
 
-
-
-
-
-
-
-
 --[[
     CREDITS :
         @Izodope#9936 - Main Creator
@@ -241,7 +234,6 @@ islandX[103] = -6017; islandY[103] = 129194; islandN[103] = 'Castaway Isle'
 islandX[104] = -88283; islandY[104] = 155235; islandN[104] = 'Fools Lagoon'
 islandX[105] = 163885; islandY[105] = 246305; islandN[105] = 'Crooks Hollow'
 islandX[106] = 275365; islandY[106] = 231924; islandN[106] = 'Barnacle Cay'
-
 
 -- Classes
 events = -1
