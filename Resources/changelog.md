@@ -1,4 +1,15 @@
 ## Changes
+- **1.2.0**
+  + Changed the Athena Chest ESP to Valuable Items ESP
+  + Added Emissary Flag ESP
+  + Added Gold Vault Key ESP
+  + Added Stronghold/FoF/FotD Key ESP
+  + Added the Chest of Fortune to Valuable Item ESP
+  + Added Reaper's Chests to Valuable Item ESP
+  + Added Reaper's Bounties to Valuable Item ESP
+  + Added the Ashen Winds Skull to Valuable Item ESP
+  + Added the Chest of Tributes to Valuable Item ESP
+  + Added the Gold Hoarder's Skull to Valuable Items ESP
 - **1.1.5**
   + Removed the Megalodon ESP because it was causing issues when used with the Shark and Shark Alert functions
   + Shark Alert is no longer visible when you are out of the water except while below deck on a ship
