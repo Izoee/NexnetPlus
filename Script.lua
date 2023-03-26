@@ -19,7 +19,7 @@ pToggle = false -- DO NOT CHANGE THIS VARIABLE
 -- and save the lua file for your preferred default settings
 eventToggle = false
 kegToggle = false
-chestToggle = false
+valuableToggle = false
 sharkToggle = false
 sharkAlertToggle = false
 mermToggle = false
@@ -28,6 +28,9 @@ ammoPouchToggle = false
 ladderToggle = false
 islandToggle = false
 shipSpeedToggle = false
+emissaryFlagToggle = false
+goldHoarderKeyToggle = false
+fortKeyToggle = false
 
 -- Colors
 -- You can change any of the following variables to whatever color you want in an RGBA format
@@ -38,8 +41,8 @@ borderR, borderG, borderB, borderA = 255, 255, 255, 255 -- Border RGBA
 titleR, titleG, titleB, titleA = 255, 255, 255, 255 -- Title RGBA
 optionR, optionG, optionB, optionA = 255, 255, 255, 255 -- Text RGBA
 eventR, eventG, eventB, eventA = 255, 255, 255, 255 -- World Event RGBA
-kegR, kegG, kegB, kegA = 255, 255, 255, 255 -- Keg RGBA
-chestR, chestG, chestB, chestA = 255, 255, 255, 255 -- Chest RGBA
+kegR, kegG, kegB, kegA = 255, 0, 0, 255 -- Keg RGBA
+valuableR, valuableG, valuableB, valuableA = 255, 255, 255, 255 -- Valuable Item RGBA
 sharkR, sharkG, sharkB, sharkA = 255, 255, 255, 255 -- Shark RGBA
 sAlertR, sAlertG, sAlertB, sAlertA = 255, 0, 0, 255 -- Shark Alert RGBA
 mermR, mermG, mermB, mermA = 255, 255, 255, 255 -- Mermaid RGBA
@@ -49,11 +52,14 @@ ladderR, ladderG, ladderB, ladderA = 255, 255, 255, 255 -- Ladder RGBA
 islandR, islandG, islandB, islandA = 255, 255, 255, 255 -- Island RGBA
 outpostR, outpostG, outpostB, outpostA = 0, 255, 0, 255 -- Outpost RGBA
 speedR, speedG, speedB, speedA = 255, 255, 255, 255 -- Ship Speed RGBA
+emissaryR, emissaryG, emissaryB, emissaryA = 255, 255, 255, 255 -- Emissary Flag RGBA
+ghKeyR, ghKeyG, ghKeyB, ghKeyA = 255, 255, 255, 255 -- Gold Hoarder Key RGBA
+fortKeyR, fortKeyG, fortKeyB, fortKeyA = 255, 255, 255, 255 -- Stronghold Key RGBA
 -- TO HERE
 
 -- Menu Size and Location
 pX, pY = 1650, 75 -- Change this to change the default position of the menu
-oW, oH = 200, 311
+oW, oH = 200, 380
 pW, pH = oW, oH
 pCX = pW / 2 + pX
 pCY = pH / 2 + pY
@@ -75,6 +81,9 @@ lineEight = lineSeven + 20
 lineNine = lineEight + 20
 lineTen = lineNine + 20
 lineEleven = lineTen + 20
+lineTwelve = lineEleven + 20
+lineThirteen = lineTwelve + 20
+lineFourteen = lineThirteen + 20
 
 -- Rectangle Position
 rectX = pCX + 73
@@ -89,6 +98,9 @@ l8RectY = lineEight + 4
 l9RectY = lineNine + 4
 l10RectY = lineTen + 4
 l11RectY = lineEleven + 4
+l12RectY = lineTwelve + 4
+l13RectY = lineThirteen + 4
+l14RectY = lineFourteen + 4
 
 -- Zones
 zoneXAlign = pX + 5
@@ -105,6 +117,9 @@ zoneL8Y = l8RectY - 4
 zoneL9Y = l9RectY - 4
 zoneL10Y = l10RectY - 4
 zoneL11Y = l11RectY - 4
+zoneL12Y = l12RectY - 4
+zoneL13Y = l13RectY - 4
+zoneL14Y = l14RectY - 4
 
 -- Exit Button Position
 eButtonX = pW / 3 + pX
@@ -238,13 +253,14 @@ islandX[106] = 275365; islandY[106] = 231924; islandN[106] = 'Barnacle Cay'
 -- Classes
 events = -1
 kegs = -1
-athenaChests = -1
+booty = -1
 sharks = -1
 merms = -1
 sirens = -1
 ammoPouches = -1
 ladders = -1
 ships = -1
+fortKeys = -1
 
 function checkBounds()
     if pToggle == true then
@@ -268,7 +284,7 @@ function checkBounds()
                 kegToggle = not kegToggle
   
             elseif mY >= zoneL3Y and mY <= zoneL3Y + 18 then
-                chestToggle = not chestToggle
+                valuableToggle = not valuableToggle
 
             elseif mY >= zoneL4Y and mY <= zoneL4Y + 18 then
                 sharkToggle = not sharkToggle
@@ -293,6 +309,15 @@ function checkBounds()
         
             elseif mY >= zoneL11Y and mY <= zoneL11Y + 18 then
                 shipSpeedToggle = not shipSpeedToggle
+                
+            elseif mY >= zoneL12Y and mY <= zoneL12Y + 18 then
+                emissaryFlagToggle = not emissaryFlagToggle
+                
+            elseif mY >= zoneL13Y and mY <= zoneL13Y + 18 then
+                goldHoarderKeyToggle = not goldHoarderKeyToggle
+                
+            elseif mY >= zoneL14Y and mY <= zoneL14Y + 18 then
+                fortKeyToggle = not fortKeyToggle
             end
         end
     end
@@ -310,7 +335,7 @@ function parseName(name)
     local index = 0
     local pindex = 0
 
-    for e = 9, 1, -1 do
+    for e = 15, 1, -1 do
         if index == nil then
             local pminus = ((namelen - pindex) + 2) * -1
             local pname = name:sub(1, pminus)
@@ -373,6 +398,9 @@ function moveMenu(mouse)
     lineNine = lineEight + 20
     lineTen = lineNine + 20
     lineEleven = lineTen + 20
+    lineTwelve = lineEleven + 20
+    lineThirteen = lineTwelve + 20
+    lineFourteen = lineThirteen + 20
 
     -- Rectangle Position
     rectX = pCX + 73
@@ -387,6 +415,9 @@ function moveMenu(mouse)
     l9RectY = lineNine + 4
     l10RectY = lineTen + 4
     l11RectY = lineEleven + 4
+    l12RectY = lineTwelve + 4
+    l13RectY = lineThirteen + 4
+    l14RectY = lineFourteen + 4
 
     -- Exit Button Position
     eButtonX = pW / 3 + pX
@@ -411,6 +442,9 @@ function moveMenu(mouse)
     zoneL9Y = l9RectY - 4
     zoneL10Y = l10RectY - 4
     zoneL11Y = l11RectY - 4
+    zoneL12Y = l12RectY - 4
+    zoneL13Y = l13RectY - 4
+    zoneL14Y = l14RectY - 4
 end
 
 function onRenderEvent()
@@ -473,8 +507,8 @@ function onRenderEvent()
         end
         Nexnet_Rect(rectX, l2RectY, 10, 10, optionR, optionB, optionG, optionA)
 
-        Nexnet_String("Athena Chests", aLeft + 5, lineThree, optionR, optionB, optionG, optionA, 15, 0)
-        if chestToggle == true then
+        Nexnet_String("Valuable Items", aLeft + 6, lineThree, optionR, optionB, optionG, optionA, 15, 0)
+        if valuableToggle == true then
             Nexnet_Line(rectX, l3RectY + 10, rectX + 10, l3RectY, optionR, optionB, optionG, optionA)
             Nexnet_Line(rectX, l3RectY, rectX + 10, l3RectY + 10, optionR, optionB, optionG, optionA)
         end
@@ -536,6 +570,27 @@ function onRenderEvent()
             Nexnet_Line(rectX, l11RectY, rectX + 10, l11RectY + 10, optionR, optionB, optionG, optionA)
         end
         Nexnet_Rect(rectX, l11RectY, 10, 10, optionR, optionB, optionG, optionA)
+        
+        Nexnet_String("Emissary Flags", aLeft + 7, lineTwelve, optionR, optionB, optionG, optionA, 15, 0)
+        if emissaryFlagToggle == true then
+            Nexnet_Line(rectX, l12RectY + 10, rectX + 10, l12RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l12RectY, rectX + 10, l12RectY + 10, optionR, optionB, optionG, optionA)
+        end
+        Nexnet_Rect(rectX, l12RectY, 10, 10, optionR, optionB, optionG, optionA)
+        
+        Nexnet_String("Gold Vault Keys", aLeft + 8, lineThirteen, optionR, optionB, optionG, optionA, 15, 0)
+        if goldHoarderKeyToggle == true then
+            Nexnet_Line(rectX, l13RectY + 10, rectX + 10, l13RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l13RectY, rectX + 10, l13RectY + 10, optionR, optionB, optionG, optionA)
+        end
+        Nexnet_Rect(rectX, l13RectY, 10, 10, optionR, optionB, optionG, optionA)
+        
+        Nexnet_String("Stronghold Keys", aLeft + 8, lineFourteen, optionR, optionB, optionG, optionA, 15, 0)
+        if fortKeyToggle == true then
+            Nexnet_Line(rectX, l14RectY + 10, rectX + 10, l14RectY, optionR, optionB, optionG, optionA)
+            Nexnet_Line(rectX, l14RectY, rectX + 10, l14RectY + 10, optionR, optionB, optionG, optionA)
+        end
+        Nexnet_Rect(rectX, l14RectY, 10, 10, optionR, optionB, optionG, optionA)
 
         Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, optionR, optionB, optionG,optionA)
         Nexnet_String("Close", eBCX, eBCY, optionR, optionB, optionG,optionA, 15, 0)
@@ -579,54 +634,130 @@ function onRenderEvent()
         end
     end
 
-    if kegs == -1 then
-        kegs = Nexnet_RegisterClass("Class Athena.StaticMerchantCrateItemProxy")
+    if booty == -1 then
+        booty = Nexnet_RegisterClass("Class Athena.BootyProxy")
     end
-    if kegToggle == true then
-        if kegs > -1 then
-            local num = Nexnet_GetActorCount(kegs)
+    if valuableToggle == true or kegToggle == true or emissaryFlagToggle == true or goldHoarderKeyToggle == true then
+        if booty > -1 then
+            local num = Nexnet_GetActorCount(booty)
             if num > 0 then
                 for i = num, 1, -1 do
-                    local x, y, z = Nexnet_GetActorLocation(kegs, i)
+                    local x, y, z = Nexnet_GetActorLocation(booty, i)
                     local sX, sY = Nexnet_WorldToScreen(x, y, z)
-                    gName = Nexnet_GetActorName(kegs, i)
+                    gName = Nexnet_GetActorName(booty, i)
                     name = parseName(gName)
                     dist = math.floor(math.sqrt((posX - x)^2 + (posY - y)^2)/100)
                     if x ~= 0 and y ~= 0 then
                         if sX > 0 then
-                            if name == "BP_MerchantCrate_PirateLegendBigGunpowderBarrelProxy_C" then
-                                Nexnet_String("- Athena Keg ["..dist.."m] -", sX, sY, kegR, kegG, kegB, kegA, 15, 1)
-                            elseif name == "BP_MerchantCrate_BigGunpowderBarrelProxy_C" then
-                                Nexnet_String("- Stronghold Keg ["..dist.."m] -", sX, sY, kegR, kegG, kegB, kegA, 15, 1)
-                            elseif name == "BP_MerchantCrate_GunpowderBarrelProxy_C" then
-                                Nexnet_String("- Powder Keg ["..dist.."m] -", sX, sY, kegR, kegG, kegB, kegA, 15, 1)
+                            if kegToggle == true then
+                                if name == "BP_MerchantCrate_PirateLegendBigGunpowderBarrelProxy_C" then
+                                    Nexnet_String("Athena Keg ["..dist.."m]", sX, sY, kegR, kegG, kegB, kegA, 15, 1)
+                                elseif name == "BP_MerchantCrate_BigGunpowderBarrelProxy_C" then
+                                    Nexnet_String("Stronghold Keg ["..dist.."m]", sX, sY, kegR, kegG, kegB, kegA, 15, 1)
+                                elseif name == "BP_MerchantCrate_GunpowderBarrelProxy_C" then
+                                    Nexnet_String("Powder Keg ["..dist.."m]", sX, sY, kegR, kegG, kegB, kegA, 15, 1)
+                                end
                             end
-                        end
-                    end
-                end
-            end
-        end
-    end
-
-    if athenaChests == -1 then
-        athenaChests = Nexnet_RegisterClass("Class Athena.TreasureChestItemProxy")
-    end
-    if chestToggle == true then
-        if athenaChests > -1 then
-            local num = Nexnet_GetActorCount(athenaChests)
-            if num > 0 then
-                for i = num, 1, -1 do
-                    local x, y, z = Nexnet_GetActorLocation(athenaChests, i)
-                    local sX, sY = Nexnet_WorldToScreen(x, y, z)
-                    gName = Nexnet_GetActorName(athenaChests, i)
-                    name = parseName(gName)
-                    dist = math.floor(math.sqrt((posX - x)^2 + (posY - y)^2)/100)
-                    if x ~= 0 and y ~= 0 then
-                        if sX > 0 then
-                            if name == "BP_TreasureChest_Proxy_PirateLegend_DVR_C" then
-                                Nexnet_String("- Ashen Athena Chest ["..dist.."m] -", sX, sY, chestR, chestG, chestB, chestA, 15, 1)
-                            elseif name == "BP_TreasureChest_Proxy_PirateLegend_C" then
-                                Nexnet_String("- Ashen Athena Chest ["..dist.."m] -", sX, sY, chestR, chestG, chestB, chestA, 15, 1)
+                            
+                            if valuableToggle == true then
+                                if name == "BP_TreasureChest_Proxy_PirateLegend_DVR_C" then
+                                    Nexnet_String("Ashen Athena Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_TreasureChest_Proxy_PirateLegend_C" then
+                                    Nexnet_String("Ashen Athena Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_GoldhoarderSkull_Proxy_C" then
+                                    Nexnet_String("Gold Hoarder Skull ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_TreasureChest_Proxy_ChestofFortune_C" then
+                                    Nexnet_String("Chest of Fortune ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_ReapersBounty_Proxy_C" or name == "BP_FortReapersBountyChest_Proxy_C" then
+                                    Nexnet_String("Reaper's Bounty ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_ReapersChest_Proxy_C" or name == "BP_FortReapersChest_Proxy_C" then
+                                    Nexnet_String("Reaper's Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_AshenWindsSkull_Proxy_C" then
+                                    Nexnet_String("Ashen Winds Skull ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_TreasureChest_Vault_Proxy_C" then
+                                    Nexnet_String("Chest of Tributes ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                end
+                            end
+                            
+                            if emissaryFlagToggle == true then
+                                if name == "BP_EmissaryFlotsam_AthenasFortune_Rank5_Proxy_C" then
+                                    Nexnet_String("Athena's Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_AthenasFortune_Rank4_Proxy_C" then
+                                    Nexnet_String("Athena's Flag Grade 4 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_AthenasFortune_Rank3_Proxy_C" then
+                                    Nexnet_String("Athena's Flag Grade 3 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_AthenasFortune_Rank2_Proxy_C" then
+                                    Nexnet_String("Athena's Flag Grade 2 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_AthenasFortune_Proxy_C" then
+                                    Nexnet_String("Athena's Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                end
+                                
+                                if name == "BP_EmissaryFlotsam_GoldHoarders_Rank5_Proxy_C" then
+                                    Nexnet_String("Gold Hoarder Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_GoldHoarders_Rank4_Proxy_C" then 
+                                    Nexnet_String("Gold Hoarder Flag Grade 4 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_GoldHoarders_Rank3_Proxy_C" then
+                                    Nexnet_String("Gold Hoarder Flag Grade 3 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_GoldHoarders_Rank2_Proxy_C" then
+                                    Nexnet_String("Gold Hoarder Flag Grade 2 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_GoldHoarders_Proxy_C" then
+                                    Nexnet_String("Gold Hoarder Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                end
+                                
+                                if name == "BP_EmissaryFlotsam_OrderOfSouls_Rank5_Proxy_C" then
+                                    Nexnet_String("Order of Souls Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_OrderOfSouls_Rank4_Proxy_C" then
+                                    Nexnet_String("Order of Souls Flag Grade 4 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_OrderOfSouls_Rank3_Proxy_C" then
+                                    Nexnet_String("Order of Souls Flag Grade 3 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_OrderOfSouls_Rank2_Proxy_C" then
+                                    Nexnet_String("Order of Souls Flag Grade 2 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_OrderOfSouls_Rank1_Proxy_C" then
+                                    Nexnet_String("Order of Souls Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                end
+                                
+                                if name == "BP_EmissaryFlotsam_Reapers_Rank5_Proxy_C" then
+                                    Nexnet_String("Reaper Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_Reapers_Rank4_Proxy_C" then
+                                    Nexnet_String("Reaper Flag Grade 4 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_Reapers_Rank3_Proxy_C" then
+                                    Nexnet_String("Reaper Flag Grade 3 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_Reapers_Rank2_Proxy_C" then 
+                                    Nexnet_String("Reaper Flag Grade 2 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_Reapers_Proxy_C" then
+                                    Nexnet_String("Reaper Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                end
+                                if name == "BP_EmissaryFlotsam_MerchantAlliance_Rank5_Proxy_C" then 
+                                    Nexnet_String("Merchant Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_MerchantAlliance_Rank4_Proxy_C" then
+                                    Nexnet_String("Merchant Flag Grade 4 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_MerchantAlliance_Rank3_Proxy_C" then
+                                    Nexnet_String("Merchant Flag Grade 3 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_MerchantAlliance_Rank2_Proxy_C" then
+                                    Nexnet_String("Merchant Flag Grade 2 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                elseif name == "BP_EmissaryFlotsam_MerchantAlliance_Proxy_C" then
+                                    Nexnet_String("Merchant Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
+                                end
+                            end
+                            
+                            if goldHoarderKeyToggle == true then
+                                if name == "BP_Totem_GoldShark_Proxy_C" then
+                                    Nexnet_String("Kraken's Fall Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_GoldBoar_Proxy_C" then
+                                    Nexnet_String("Devil's Ridge Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_GoldMoon_Proxy_C" then
+                                    Nexnet_String("Crescent Isle Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_GoldSnake_Proxy_C" then
+                                    Nexnet_String("Mermaid's Hideaway Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_GoldScarab_Proxy_C" then
+                                    Nexnet_String("Crook's Hollow Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_GoldCrab_Proxy_C" then
+                                    Nexnet_String("N-13 Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_GoldEagle_Proxy_C" then
+                                    Nexnet_String("Fetcher's Rest Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_GoldSun_Proxy_C" then
+                                    Nexnet_String("Ashen Reaches Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                end
                             end
                         end
                     end
@@ -799,6 +930,34 @@ function onRenderEvent()
                         Nexnet_String("Not Moving", sX, sY - 25 , speedR, speedG, speedB, speedA, 15, 1)
                     else
                         Nexnet_String("Speed : [" .. newvel .. "m]", sX, sY - 25 , speedR, speedG, speedB, speedA, 15, 1)
+                    end
+                end
+            end
+        end
+    end
+    
+    if fortKeys == -1 then
+        fortKeys = Nexnet_RegisterClass("Class Athena.StrongholdKeyProxy")
+    end
+    if fortKeyToggle == true then
+        if fortKeys > -1 then
+            local num = Nexnet_GetActorCount(fortKeys)
+            if num > 0 then
+                for i = num, 1, -1 do
+                    local x, y, z = Nexnet_GetActorLocation(fortKeys, i)
+                    local sX, sY = Nexnet_WorldToScreen(x, y, z)
+                    gName = Nexnet_GetActorName(fortKeys, i)
+                    name = parseName(gName)
+                    if x ~= 0 and y ~= 0 then
+                        if sX > 0 then
+                            if name == "BP_FotD_StrongholdKey_Proxy_C" then
+                                Nexnet_String("FotD Key ["..dist.."m]", sX, sY, fortKeyR, fortKeyG, fortKeyB, fortKeyA, 15, 1)
+                            elseif name == "BP_LegendaryFort_StrongholdKey_Proxy_C" then
+                                Nexnet_String("FoF Key ["..dist.."m]", sX, sY, fortKeyR, fortKeyG, fortKeyB, fortKeyA, 15, 1)
+                            elseif name == "BP_StrongholdKey_Proxy_C" then
+                                Nexnet_String("Stronghold Key ["..dist.."m]", sX, sY, fortKeyR, fortKeyG, fortKeyB, fortKeyA, 15, 1)
+                            end
+                        end
                     end
                 end
             end
