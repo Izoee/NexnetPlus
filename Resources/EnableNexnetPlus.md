@@ -1,6 +1,7 @@
 ## Requirements :
 - **YOU MUST BE ON THE STEAM VERSION OF SEA OF THIEVES TO USE NEXNET+**
 - **YOU MUST OWN NEXNET**, you can buy it [here](https://nexnet-cheats.cc/).
+- **ON UPDATES YOU WILL NEED TO REDEFINE YOUR CUSTOM COLORS IF YOU HAVE ADDED THEM.**
 
 ## How to Download and Enable Nexnet+  :
   1. Download the [NexnetPlus-main.zip](https://github.com/Izoee/NexnetPlus/archive/refs/heads/main.zip) file.
