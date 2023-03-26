@@ -10,6 +10,7 @@
   + Added the Ashen Winds Skull to Valuable Item ESP
   + Added the Chest of Tributes to Valuable Item ESP
   + Added the Gold Hoarder's Skull to Valuable Items ESP
+  + Added the Skull of Destiny to Valuable Items ESP
 - **1.1.5**
   + Removed the Megalodon ESP because it was causing issues when used with the Shark and Shark Alert functions
   + Shark Alert is no longer visible when you are out of the water except while below deck on a ship
