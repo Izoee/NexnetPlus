@@ -676,6 +676,8 @@ function onRenderEvent()
                                     Nexnet_String("Ashen Winds Skull ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_TreasureChest_Vault_Proxy_C" then
                                     Nexnet_String("Chest of Tributes ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_SkullOfDestiny_Proxy_C" then
+                                    Nexnet_String("Skull of Destiny ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 end
                             end
                             
