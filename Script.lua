@@ -34,7 +34,6 @@ fortKeyToggle = false
 
 -- Colors
 -- You can change any of the following variables to whatever color you want in an RGBA format
--- Make sure you save these to an external file so you can just paste in the code every update
 -- COPY FROM HERE
 fillRGB, fillA = 20, 80 -- Fill Color and Alpha
 borderR, borderG, borderB, borderA = 255, 255, 255, 255 -- Border RGBA
@@ -59,7 +58,7 @@ fortKeyR, fortKeyG, fortKeyB, fortKeyA = 255, 255, 255, 255 -- Stronghold Key RG
 
 -- Menu Size and Location
 pX, pY = 1650, 75 -- Change this to change the default position of the menu
-oW, oH = 200, 380
+oW, oH = 200, 375
 pW, pH = oW, oH
 pCX = pW / 2 + pX
 pCY = pH / 2 + pY
