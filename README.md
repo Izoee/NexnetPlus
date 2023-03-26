@@ -1,14 +1,14 @@
 # Nexnet+ 
 
 ![alt text](https://github.com/Izoee/NexnetPlus/blob/main/Resources/displayImage.png?raw=true)  
-Current Version : 1.1.5 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/Resources/changelog.md)
+Current Version : 1.2.0 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/Resources/changelog.md)
 ### [Download and Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/Resources/EnableNexnetPlus.md)
 
 #### Features :
 - **Moveable Menu** - (Click and drag the Nexnet+ title bar)
 - World Event ESP
 - Keg ESP
-- Athena Chest ESP
+- Valuable Item ESP
 - Shark ESP
 - Shark Alert
 - Mermaid ESP
@@ -17,6 +17,9 @@ Current Version : 1.1.5 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - Ladder ESP
 - Island ESP
 - Ship Speed ESP
+- Emissary Flag ESP
+- Gold Vault Key ESP
+- Stronghold/FoF/FotD Key ESP
 
 #### Keybinds :
 - **HOME** - Open/Close the Menu  
