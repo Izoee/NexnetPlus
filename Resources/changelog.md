@@ -4,6 +4,7 @@
   + Added Emissary Flag ESP
   + Added Gold Vault Key ESP
   + Added Stronghold/FoF/FotD Key ESP
+  + Added Ghost Ship Fleets to the World Events ESP
   + Added the Chest of Fortune to Valuable Item ESP
   + Added Reaper's Chests to Valuable Item ESP
   + Added Reaper's Bounties to Valuable Item ESP
