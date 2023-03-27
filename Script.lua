@@ -58,7 +58,7 @@ fortKeyR, fortKeyG, fortKeyB, fortKeyA = 255, 255, 255, 255 -- Stronghold Key RG
 
 -- Menu Size and Location
 pX, pY = 1650, 75 -- Change this to change the default position of the menu
-oW, oH = 200, 375
+oW, oH = 200, 372
 pW, pH = oW, oH
 pCX = pW / 2 + pX
 pCY = pH / 2 + pY
@@ -584,7 +584,7 @@ function onRenderEvent()
         end
         Nexnet_Rect(rectX, l13RectY, 10, 10, optionR, optionB, optionG, optionA)
         
-        Nexnet_String("Stronghold Keys", aLeft + 8, lineFourteen, optionR, optionB, optionG, optionA, 15, 0)
+        Nexnet_String("Stronghold Keys", aLeft + 9, lineFourteen, optionR, optionB, optionG, optionA, 15, 0)
         if fortKeyToggle == true then
             Nexnet_Line(rectX, l14RectY + 10, rectX + 10, l14RectY, optionR, optionB, optionG, optionA)
             Nexnet_Line(rectX, l14RectY, rectX + 10, l14RectY + 10, optionR, optionB, optionG, optionA)
