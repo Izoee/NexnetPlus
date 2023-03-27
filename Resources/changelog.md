@@ -1,5 +1,5 @@
 ## Changes
-- **1.2.0 [SEASON 9]**
+- **1.2.0 - Season 9 Update**
   + Changed the Athena Chest ESP to Valuable Items ESP
   + Added Emissary Flag ESP
   + Added Gold Vault Key ESP
