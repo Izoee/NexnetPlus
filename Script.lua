@@ -34,7 +34,6 @@ fortKeyToggle = false
 
 -- Colors
 -- You can change any of the following variables to whatever color you want in an RGBA format
--- COPY FROM HERE
 fillRGB, fillA = 20, 80 -- Fill Color and Alpha
 borderR, borderG, borderB, borderA = 255, 255, 255, 255 -- Border RGBA
 titleR, titleG, titleB, titleA = 255, 255, 255, 255 -- Title RGBA
@@ -54,7 +53,6 @@ speedR, speedG, speedB, speedA = 255, 255, 255, 255 -- Ship Speed RGBA
 emissaryR, emissaryG, emissaryB, emissaryA = 255, 255, 255, 255 -- Emissary Flag RGBA
 ghKeyR, ghKeyG, ghKeyB, ghKeyA = 255, 255, 255, 255 -- Gold Hoarder Key RGBA
 fortKeyR, fortKeyG, fortKeyB, fortKeyA = 255, 255, 255, 255 -- Stronghold Key RGBA
--- TO HERE
 
 -- Menu Size and Location
 pX, pY = 1650, 75 -- Change this to change the default position of the menu
@@ -728,6 +726,7 @@ function onRenderEvent()
                                 elseif name == "BP_EmissaryFlotsam_Reapers_Proxy_C" then
                                     Nexnet_String("Reaper Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 end
+                                
                                 if name == "BP_EmissaryFlotsam_MerchantAlliance_Rank5_Proxy_C" then 
                                     Nexnet_String("Merchant Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 elseif name == "BP_EmissaryFlotsam_MerchantAlliance_Rank4_Proxy_C" then
@@ -970,8 +969,9 @@ function onKeyPressed(key)
     if key == 36 then -- HOME KEY (OPENS THE MENU)
         pToggle = not pToggle
     end
-    -- ONLY FOR DEBUGGING/ADDING SHIT
+    
     --[[
+    -- ONLY FOR DEBUGGING/ADDING SHIT
     if key == 17 then -- CTRL KEY (RELOADS THE MENU)
         Nexnet_Reload()
     end
