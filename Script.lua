@@ -591,7 +591,7 @@ function onRenderEvent()
 
         Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, optionR, optionB, optionG,optionA)
         Nexnet_String("Close", eBCX, eBCY, optionR, optionB, optionG,optionA, 15, 0)
-        Nexnet_String("v1.2.0", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
+        Nexnet_String("v1.2.1", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
     end
 
     -- BACKEND
@@ -657,14 +657,8 @@ function onRenderEvent()
                             end
                             
                             if valuableToggle == true then
-                                if name == "BP_TreasureChest_Proxy_PirateLegend_DVR_C" then
-                                    Nexnet_String("Ashen Athena Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
-                                elseif name == "BP_TreasureChest_Proxy_PirateLegend_C" then
-                                    Nexnet_String("Ashen Athena Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
-                                elseif name == "BP_GoldhoarderSkull_Proxy_C" then
+                                if name == "BP_GoldhoarderSkull_Proxy_C" then
                                     Nexnet_String("Gold Hoarder Skull ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
-                                elseif name == "BP_TreasureChest_Proxy_ChestofFortune_C" then
-                                    Nexnet_String("Chest of Fortune ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_ReapersBounty_Proxy_C" or name == "BP_FortReapersBountyChest_Proxy_C" then
                                     Nexnet_String("Reaper's Bounty ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_ReapersChest_Proxy_C" or name == "BP_FortReapersChest_Proxy_C" then
@@ -675,6 +669,12 @@ function onRenderEvent()
                                     Nexnet_String("Chest of Tributes ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_SkullOfDestiny_Proxy_C" then
                                     Nexnet_String("Skull of Destiny ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_TreasureChest_Proxy_PirateLegend_DVR_C" then
+                                    Nexnet_String("Ashen Athena Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_TreasureChest_Proxy_ChestofFortune_C" then
+                                    Nexnet_String("Chest of Fortune ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_TreasureChest_Proxy_PirateLegend_C" then
+                                    Nexnet_String("Athena Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 end
                             end
                             
@@ -689,9 +689,8 @@ function onRenderEvent()
                                     Nexnet_String("Athena's Flag Grade 2 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 elseif name == "BP_EmissaryFlotsam_AthenasFortune_Proxy_C" then
                                     Nexnet_String("Athena's Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
-                                end
-                                
-                                if name == "BP_EmissaryFlotsam_GoldHoarders_Rank5_Proxy_C" then
+                                    
+                                elseif name == "BP_EmissaryFlotsam_GoldHoarders_Rank5_Proxy_C" then
                                     Nexnet_String("Gold Hoarder Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 elseif name == "BP_EmissaryFlotsam_GoldHoarders_Rank4_Proxy_C" then 
                                     Nexnet_String("Gold Hoarder Flag Grade 4 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
@@ -701,9 +700,8 @@ function onRenderEvent()
                                     Nexnet_String("Gold Hoarder Flag Grade 2 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 elseif name == "BP_EmissaryFlotsam_GoldHoarders_Proxy_C" then
                                     Nexnet_String("Gold Hoarder Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
-                                end
-                                
-                                if name == "BP_EmissaryFlotsam_OrderOfSouls_Rank5_Proxy_C" then
+                                    
+                                elseif name == "BP_EmissaryFlotsam_OrderOfSouls_Rank5_Proxy_C" then
                                     Nexnet_String("Order of Souls Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 elseif name == "BP_EmissaryFlotsam_OrderOfSouls_Rank4_Proxy_C" then
                                     Nexnet_String("Order of Souls Flag Grade 4 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
@@ -713,9 +711,8 @@ function onRenderEvent()
                                     Nexnet_String("Order of Souls Flag Grade 2 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 elseif name == "BP_EmissaryFlotsam_OrderOfSouls_Rank1_Proxy_C" then
                                     Nexnet_String("Order of Souls Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
-                                end
-                                
-                                if name == "BP_EmissaryFlotsam_Reapers_Rank5_Proxy_C" then
+                                    
+                                elseif name == "BP_EmissaryFlotsam_Reapers_Rank5_Proxy_C" then
                                     Nexnet_String("Reaper Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 elseif name == "BP_EmissaryFlotsam_Reapers_Rank4_Proxy_C" then
                                     Nexnet_String("Reaper Flag Grade 4 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
@@ -725,9 +722,8 @@ function onRenderEvent()
                                     Nexnet_String("Reaper Flag Grade 2 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 elseif name == "BP_EmissaryFlotsam_Reapers_Proxy_C" then
                                     Nexnet_String("Reaper Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
-                                end
-                                
-                                if name == "BP_EmissaryFlotsam_MerchantAlliance_Rank5_Proxy_C" then 
+                                    
+                                elseif name == "BP_EmissaryFlotsam_MerchantAlliance_Rank5_Proxy_C" then 
                                     Nexnet_String("Merchant Flag Grade 5 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 elseif name == "BP_EmissaryFlotsam_MerchantAlliance_Rank4_Proxy_C" then
                                     Nexnet_String("Merchant Flag Grade 4 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
@@ -742,21 +738,61 @@ function onRenderEvent()
                             
                             if goldHoarderKeyToggle == true then
                                 if name == "BP_Totem_GoldShark_Proxy_C" then
-                                    Nexnet_String("Kraken's Fall Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                    Nexnet_String("Kraken's Fall Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverShark_Proxy_C" then
+                                    Nexnet_String("Kraken's Fall Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneShark_Proxy_C" then
+                                    Nexnet_String("Kraken's Fall Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                    
                                 elseif name == "BP_Totem_GoldBoar_Proxy_C" then
                                     Nexnet_String("Devil's Ridge Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverBoar_Proxy_C" then
+                                    Nexnet_String("Devil's Ridge Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneBoar_Proxy_C" then
+                                    Nexnet_String("Devil's Ridge Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                    
                                 elseif name == "BP_Totem_GoldMoon_Proxy_C" then
                                     Nexnet_String("Crescent Isle Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverMoon_Proxy_C" then
+                                    Nexnet_String("Crescent Isle Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneMoon_Proxy_C" then
+                                    Nexnet_String("Crescent Isle Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                    
                                 elseif name == "BP_Totem_GoldSnake_Proxy_C" then
                                     Nexnet_String("Mermaid's Hideaway Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverSnake_Proxy_C" then
+                                    Nexnet_String("Mermaid's Hideaway Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)    
+                                elseif name == "BP_Totem_StoneSnake_Proxy_C" then
+                                    Nexnet_String("Mermaid's Hideaway Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                    
                                 elseif name == "BP_Totem_GoldScarab_Proxy_C" then
                                     Nexnet_String("Crook's Hollow Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverScarab_Proxy_C" then
+                                    Nexnet_String("Crook's Hollow Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneScarab_Proxy_C" then
+                                    Nexnet_String("Crook's Hollow Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                    
                                 elseif name == "BP_Totem_GoldCrab_Proxy_C" then
                                     Nexnet_String("N-13 Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverCrab_Proxy_C" then
+                                    Nexnet_String("N-13 Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneCrab_Proxy_C" then
+                                    Nexnet_String("N-13 Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                    
                                 elseif name == "BP_Totem_GoldEagle_Proxy_C" then
                                     Nexnet_String("Fetcher's Rest Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverEagle_Proxy_C" then
+                                    Nexnet_String("Fetcher's Rest Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneEagle_Proxy_C" then
+                                    Nexnet_String("Fetcher's Rest Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                    
+                                    
                                 elseif name == "BP_Totem_GoldSun_Proxy_C" then
                                     Nexnet_String("Ashen Reaches Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverSun_Proxy_C" then
+                                    Nexnet_String("Ashen Reaches Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneSun_Proxy_C" then
+                                    Nexnet_String("Ashen Reaches Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
                                 end
                             end
                         end
@@ -833,7 +869,7 @@ function onRenderEvent()
                     dist = math.floor(math.sqrt((posX - x)^2 + (posY - y)^2)/100)
                     if x ~= 0 and y ~= 0 then
                         if sX > 0 then
-                            Nexnet_String("- Siren -", sX, sY, sirenR, sirenG, sirenB, sirenA, 15, 1)
+                            Nexnet_String("Siren ["..dist.."m]", sX, sY, sirenR, sirenG, sirenB, sirenA, 15, 1)
                         end
                     end
                 end
@@ -892,7 +928,7 @@ function onRenderEvent()
     
     if islandToggle == true then
         for i = #islandN, 0, -1 do
-            local sX, sY = Nexnet_WorldToScreen(islandX[i],islandY[i],islandZConst)
+            local sX, sY = Nexnet_WorldToScreen(islandX[i], islandY[i], islandZConst)
             dist = math.floor(math.sqrt((posX - islandX[i])^2 + (posY - islandY[i])^2)/100)
             local isOutpost = checkIfOutpost(islandN[i])
             if sX > 0 then
