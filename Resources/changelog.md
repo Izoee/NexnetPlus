@@ -1,4 +1,7 @@
 ## Changes
+- **1.2.1**
+  + Fixed Athena Chests displaying as Ashen Athena Chests
+  + Added Silver and Stone Keys to the Gold Vault Keys ESP
 - **1.2.0 - Season 9 Update**
   + Changed the Athena Chest ESP to Valuable Items ESP
   + Added Emissary Flag ESP
