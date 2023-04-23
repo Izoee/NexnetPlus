@@ -1,7 +1,7 @@
 ## Changes
 - **1.2.2**
   + Added Box of Wondrous Secrets to Valuable Items ESP
-  + Renamed New Golden Sands Outpost to Post Merrick
+  + Renamed New Golden Sands Outpost to Port Merrick
 - **1.2.1**
   + Fixed Athena Chests displaying as Ashen Athena Chests
   + Added Silver and Stone Keys to the Gold Vault Keys ESP
