@@ -180,7 +180,7 @@ islandX[37] = -436438; islandY[37] = -499281; islandN[37] = "Treasury of Sunken 
 islandX[38] = -500797; islandY[38] = -245909; islandN[38] = "Spoils of Plenty Store"
 islandX[39] = -396814; islandY[39] = -185474; islandN[39] = "Rapier Cay"
 islandX[40] = -502584; islandY[40] = -130358; islandN[40] = "Crescent Isle"
-islandX[41] = -390068; islandY[41] = -55461; islandN[41] = "Post Merrick"
+islandX[41] = -390068; islandY[41] = -55461; islandN[41] = "Port Merrick"
 islandX[42] = -495854; islandY[42] = -11818; islandN[42] = "Sea Dog's Rest"
 islandX[43] = -550529; islandY[43] = -14183; islandN[43] = "Imperial Crown Fortress"
 islandX[44] = -504272; islandY[44] = 97442; islandN[44] = "Mermaid's Hideaway"
