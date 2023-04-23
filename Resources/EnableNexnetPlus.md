@@ -14,7 +14,7 @@
   9. Press the HOME key to open Nexnet+
   10. Enjoy
 
-## Advanced Customization :
+## Advanced Customization (OPTIONAL) :
   - [How to Edit Colors](https://github.com/Izoee/NexnetPlus/blob/main/Resources/EditColors.md)
 
 ## WARNING :
