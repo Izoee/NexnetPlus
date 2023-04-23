@@ -139,113 +139,113 @@ islandZConst = 15000
 islandN = {}
 
 -- Island Info | Credit: @Juke#7394
-islandX[0] = 497395; islandY[0] = -327061; islandN[0] = 'Traitors Fate Forteress'
-islandX[1] = 387505; islandY[1] = -304825; islandN[1] = 'Plunderers Plight'
-islandX[2] = 446022; islandY[2] = -206311; islandN[2] = 'Galleons Grave Outpost'
-islandX[3] = 300976; islandY[3] = -233652; islandN[3] = 'Sunken Grove'
-islandX[4] = 441512; islandY[4] = -369299; islandN[4] = 'Black Water Enclave'
-islandX[5] = 336077; islandY[5] = -117935; islandN[5] = 'Skull Keep'
-islandX[6] = 432052; islandY[6] = -90803; islandN[6] = 'Tri-Rock Isle'
-islandX[7] = 499368; islandY[7] = -36450; islandN[7] = 'Liars Backbone'
-islandX[8] = 507858; islandY[8] = -101328; islandN[8] = 'Three Paces East Seapost'
-islandX[9] = 680209; islandY[9] = 28414; islandN[9] = 'Flintlock Peninsula'
-islandX[10] = 377950; islandY[10] = -460878; islandN[10] = 'Marauders Arch '
-islandX[11] = 443559; islandY[11] = 62449; islandN[11] = 'Krakens Fall'
-islandX[12] = 140510; islandY[12] = -64866; islandN[12] = 'Shipwreck Bay'
-islandX[13] = 151885; islandY[13] = -217786; islandN[13] = 'Dagger Tooth Outpost'
-islandX[14] = 244097; islandY[14] = -138150; islandN[14] = 'Isle of Last Words'
-islandX[15] = 167832; islandY[15] = -400381; islandN[15] = 'Old Faithful Isle'
-islandX[16] = 381084; islandY[16] = -362667; islandN[16] = 'Shrine of Hungering'
-islandX[17] = 308923; islandY[17] = -359532; islandN[17] = 'Shark Fin Camp'
-islandX[18] = 267942; islandY[18] = -397816; islandN[18] = 'Wild Treasure Store'
-islandX[19] = 225601; islandY[19] = -313671; islandN[19] = 'Blind Man Lagoon'
-islandX[20] = 68944; islandY[20] = -316121; islandN[20] = 'Krakens Watch Tower'
-islandX[21] = -45347; islandY[21] = -326147; islandN[21] = 'Royal Crest Fortress'
-islandX[22] = 31092; islandY[22] = -414643; islandN[22] = 'Scurvey Isley'
-islandX[23] = 98942; islandY[23] = -469294; islandN[23] = 'Treasury of the Secret Wilds'
-islandX[24] = 269829; islandY[24] = -451366; islandN[24] = 'Black Sand Atoll'
-islandX[25] = -91772; islandY[25] = -207283; islandN[25] = 'Hidden Spring Keep'
-islandX[26] = 14876; islandY[26] = -141302; islandN[26] = 'K9 Isle'
-islandX[27] = -155339; islandY[27] = -307117; islandN[27] = 'Lone Cove'
-islandX[28] = -183245; islandY[28] = -388273; islandN[28] = 'Shrine of the Coral Tomb'
-islandX[29] = -198353; islandY[29] = -447625; islandN[29] = 'Salty Sands'
-islandX[30] = -110660; islandY[30] = -408053; islandN[30] = 'Picaroon Palms'
-islandX[31] = -307407; islandY[31] = -467892; islandN[31] = 'Smugglers Bay'
-islandX[32] = -249297; islandY[32] = -369388; islandN[32] = 'Boulder Cay'
-islandX[33] = -376311; islandY[33] = -377337; islandN[33] = 'Sandy Shallows'
-islandX[34] = -295343; islandY[34] = -260705; islandN[34] = 'Sanctuary Outpost'
-islandX[35] = -442964; islandY[35] = -281912; islandN[35] = 'Keel Haul Fort'
-islandX[36] = -488360; islandY[36] = -396989; islandN[36] = 'Sailors Bounty'
-islandX[37] = -436438; islandY[37] = -499281; islandN[37] = 'Treasury of Sunken Shores'
-islandX[38] = -500797; islandY[38] = -245909; islandN[38] = 'Spoils of Plenty Store'
-islandX[39] = -396814; islandY[39] = -185474; islandN[39] = 'Rapier Cay'
-islandX[40] = -502584; islandY[40] = -130358; islandN[40] = 'Crescent Isle'
-islandX[41] = -390068; islandY[41] = -55461; islandN[41] = 'New Golden Sands Outpost'
-islandX[42] = -495854; islandY[42] = -11818; islandN[42] = 'Sea Dogs Rest'
-islandX[43] = -550529; islandY[43] = -14183; islandN[43] = 'Imperial Crown Fortress'
-islandX[44] = -504272; islandY[44] = 97442; islandN[44] = 'Mermaids Hideaway'
-islandX[45] = -395572; islandY[45] = 60912; islandN[45] = 'Lagoon of Whispers'
-islandX[46] = -89466; islandY[46] = 49335; islandN[46] = 'Reapers Hideout'
-islandX[47] = -268149; islandY[47] = 55395; islandN[47] = 'Wanderers Refuge'
-islandX[48] = -247097; islandY[48] = -96161; islandN[48] = 'Cannon Cove'
-islandX[49] = -197773; islandY[49] = -200711; islandN[49] = 'Lonely Isle'
-islandX[50] = -141763; islandY[50] = -117577; islandN[50] = 'Rum Runner Isle'
-islandX[51] = -149912; islandY[51] = -61976; islandN[51] = 'North Star Sea Post'
-islandX[52] = -176038; islandY[52] = -14527; islandN[52] = 'Twin Groves'
-islandX[53] = 30789; islandY[53] = 15754; islandN[53] = 'Sea Dogs Tavern'
-islandX[54] = 187330; islandY[54] = 8591; islandN[54] = 'Shrine of Flooded Embrace'
-islandX[55] = 266789; islandY[55] = -17657; islandN[55] = 'Crooked Mast'
-islandX[56] = 376462; islandY[56] = -19008; islandN[56] = 'Shiver Retreat'
-islandX[57] = 335006; islandY[57] = 67601; islandN[57] = 'Shark Tooth Key'
-islandX[58] = 341037; islandY[58] = 141763; islandN[58] = 'Mercys End Fortress'
-islandX[59] = 341037; islandY[59] = 141763; islandN[59] = 'N13'
-islandX[60] = 681414; islandY[60] = 30865; islandN[60] = 'Fetchers Rest'
-islandX[61] = 847028; islandY[61] = 24400; islandN[61] = 'Brians Bazaar'
-islandX[62] = 916428; islandY[62] = 4520; islandN[62] = 'Molten Sands Fortress'
-islandX[63] = 836805; islandY[63] = 93693; islandN[63] = 'Cursewater Shores'
-islandX[64] = 862088; islandY[64] = 263623; islandN[64] = 'Rubys Fall'
-islandX[65] = 695105; islandY[65] = 322347; islandN[65] = 'Morrows Peak Outpost'
-islandX[66] = 596063; islandY[66] = 262161; islandN[66] = 'Forsaken Brink'
-islandX[67] = 619397; islandY[67] = 168321; islandN[67] = 'Cinder Islet'
-islandX[68] = 830881; islandY[68] = 394511; islandN[68] = 'Brimstone Rock'
-islandX[69] = 940301; islandY[69] = 407962; islandN[69] = 'Glowstone Cay'
-islandX[70] = 879758; islandY[70] = 506121; islandN[70] = 'Magmas Tide'
-islandX[71] = 757005; islandY[71] = 546313; islandN[71] = 'Devils Thirst'
-islandX[72] = 611017; islandY[72] = 564837; islandN[72] = 'Roaring Sands'
-islandX[73] = 670707; islandY[73] = 656844; islandN[73] = 'Ashen Reaches'
-islandX[74] = 325006; islandY[74] = 452559; islandN[74] = 'Devils Ridge'
-islandX[75] = 242891; islandY[75] = 346706; islandN[75] = 'Crows Nest Fortress'
-islandX[76] = 211099; islandY[76] = 444881; islandN[76] = 'Mutineer Rock'
-islandX[77] = 187170; islandY[77] = 502692; islandN[77] = 'Shrine of Ancient Tears'
-islandX[78] = 109205; islandY[78] = 480884; islandN[78] = 'Thieves Haven'
-islandX[79] = 24384; islandY[79] = 568480; islandN[79] = 'Old Brinstone Fortress'
-islandX[80] = 4912; islandY[80] = 512632; islandN[80] = 'Booty isle'
-islandX[81] = 605728; islandY[81] = 470883; islandN[81] = 'Roaring Traders'
-islandX[82] = 700238; islandY[82] = 459892; islandN[82] = 'Flames End'
-islandX[83] = 369477; islandY[83] = 313845; islandN[83] = 'Ancient Spire Outpost'
-islandX[84] = 146760; islandY[84] = 371368; islandN[84] = 'Cutlass Cay'
-islandX[85] = 78968; islandY[85] = 319956; islandN[85] = 'Paradise Spring'
-islandX[86] = -18130; islandY[86] = 381961; islandN[86] = 'Plunder Outpost'
-islandX[87] = -77747; islandY[87] = 481468; islandN[87] = 'Lookout Point'
-islandX[88] = -179137; islandY[88] = 456515; islandN[88] = 'Shark Bait Cove'
-islandX[89] = -212180; islandY[89] = 382002; islandN[89] = 'Shrine of Tribute'
-islandX[90] = -140227; islandY[90] = 338323; islandN[90] = 'Lost Gold Fort'
-islandX[91] = -265455; islandY[91] = 332385; islandN[91] = 'The Finest Trading Post'
-islandX[92] = -290473; islandY[92] = 400309; islandN[92] = 'Old Salts Atoll'
-islandX[93] = -300255; islandY[93] = 460275; islandN[93] = 'Ancient Gold Fortress'
-islandX[94] = -361703; islandY[94] = 313736; islandN[94] = 'Discovery Rigde'
-islandX[95] = -241502; islandY[95] = 255960; islandN[95] = 'Plunder Valley'
-islandX[96] = -351128; islandY[96] = 160700; islandN[96] = 'Sailors Knot Stronghold'
-islandX[97] = -424639; islandY[97] = 150931; islandN[97] = 'Shrine of Oceans Fortune'
-islandX[98] = -157242; islandY[98] = 176150; islandN[98] = 'Treasury of the Lost Ancients'
-islandX[99] = 5222; islandY[99] = 238993; islandN[99] = 'Snake Isle'
-islandX[100] = -106153; islandY[100] = 242422; islandN[100] = 'Chicken Isle'
-islandX[101] = 71001; islandY[101] = 232711; islandN[101] = 'Stephens Spoils'
-islandX[102] = 94017; islandY[102] = 155428; islandN[102] = 'Fort of the Damned'
-islandX[103] = -6017; islandY[103] = 129194; islandN[103] = 'Castaway Isle'
-islandX[104] = -88283; islandY[104] = 155235; islandN[104] = 'Fools Lagoon'
-islandX[105] = 163885; islandY[105] = 246305; islandN[105] = 'Crooks Hollow'
-islandX[106] = 275365; islandY[106] = 231924; islandN[106] = 'Barnacle Cay'
+islandX[0] = 497395; islandY[0] = -327061; islandN[0] = "Traitor's Fate Forteress"
+islandX[1] = 387505; islandY[1] = -304825; islandN[1] = "Plunderer's Plight"
+islandX[2] = 446022; islandY[2] = -206311; islandN[2] = "Galleon's Grave Outpost"
+islandX[3] = 300976; islandY[3] = -233652; islandN[3] = "Sunken Grove"
+islandX[4] = 441512; islandY[4] = -369299; islandN[4] = "Black Water Enclave"
+islandX[5] = 336077; islandY[5] = -117935; islandN[5] = "Skull Keep"
+islandX[6] = 432052; islandY[6] = -90803; islandN[6] = "Tri-Rock Isle"
+islandX[7] = 499368; islandY[7] = -36450; islandN[7] = "Liar's Backbone"
+islandX[8] = 507858; islandY[8] = -101328; islandN[8] = "Three Paces East Seapost"
+islandX[9] = 680209; islandY[9] = 28414; islandN[9] = "Flintlock Peninsula"
+islandX[10] = 377950; islandY[10] = -460878; islandN[10] = "Marauder's Arch"
+islandX[11] = 443559; islandY[11] = 62449; islandN[11] = "Kraken's Fall"
+islandX[12] = 140510; islandY[12] = -64866; islandN[12] = "Shipwreck Bay"
+islandX[13] = 151885; islandY[13] = -217786; islandN[13] = "Dagger Tooth Outpost"
+islandX[14] = 244097; islandY[14] = -138150; islandN[14] = "Isle of Last Words"
+islandX[15] = 167832; islandY[15] = -400381; islandN[15] = "Old Faithful Isle"
+islandX[16] = 381084; islandY[16] = -362667; islandN[16] = "Shrine of Hungering"
+islandX[17] = 308923; islandY[17] = -359532; islandN[17] = "Shark Fin Camp"
+islandX[18] = 267942; islandY[18] = -397816; islandN[18] = "Wild Treasure Store"
+islandX[19] = 225601; islandY[19] = -313671; islandN[19] = "Blind Man Lagoon"
+islandX[20] = 68944; islandY[20] = -316121; islandN[20] = "Kraken Watchtower"
+islandX[21] = -45347; islandY[21] = -326147; islandN[21] = "Royal Crest Fortress"
+islandX[22] = 31092; islandY[22] = -414643; islandN[22] = "Scurvey Isley"
+islandX[23] = 98942; islandY[23] = -469294; islandN[23] = "Treasury of the Secret Wilds"
+islandX[24] = 269829; islandY[24] = -451366; islandN[24] = "Black Sand Atoll"
+islandX[25] = -91772; islandY[25] = -207283; islandN[25] = "Hidden Spring Keep"
+islandX[26] = 14876; islandY[26] = -141302; islandN[26] = "K9 Isle"
+islandX[27] = -155339; islandY[27] = -307117; islandN[27] = "Lone Cove"
+islandX[28] = -183245; islandY[28] = -388273; islandN[28] = "Shrine of the Coral Tomb"
+islandX[29] = -198353; islandY[29] = -447625; islandN[29] = "Salty Sands"
+islandX[30] = -110660; islandY[30] = -408053; islandN[30] = "Picaroon Palms"
+islandX[31] = -307407; islandY[31] = -467892; islandN[31] = "Smuggler's Bay"
+islandX[32] = -249297; islandY[32] = -369388; islandN[32] = "Boulder Cay"
+islandX[33] = -376311; islandY[33] = -377337; islandN[33] = "Sandy Shallows"
+islandX[34] = -295343; islandY[34] = -260705; islandN[34] = "Sanctuary Outpost"
+islandX[35] = -442964; islandY[35] = -281912; islandN[35] = "Keel Haul Fort"
+islandX[36] = -488360; islandY[36] = -396989; islandN[36] = "Sailor's Bounty"
+islandX[37] = -436438; islandY[37] = -499281; islandN[37] = "Treasury of Sunken Shores"
+islandX[38] = -500797; islandY[38] = -245909; islandN[38] = "Spoils of Plenty Store"
+islandX[39] = -396814; islandY[39] = -185474; islandN[39] = "Rapier Cay"
+islandX[40] = -502584; islandY[40] = -130358; islandN[40] = "Crescent Isle"
+islandX[41] = -390068; islandY[41] = -55461; islandN[41] = "Post Merrick"
+islandX[42] = -495854; islandY[42] = -11818; islandN[42] = "Sea Dog's Rest"
+islandX[43] = -550529; islandY[43] = -14183; islandN[43] = "Imperial Crown Fortress"
+islandX[44] = -504272; islandY[44] = 97442; islandN[44] = "Mermaid's Hideaway"
+islandX[45] = -395572; islandY[45] = 60912; islandN[45] = "Lagoon of Whispers"
+islandX[46] = -89466; islandY[46] = 49335; islandN[46] = "Reaper's Hideout"
+islandX[47] = -268149; islandY[47] = 55395; islandN[47] = "Wanderer's Refuge"
+islandX[48] = -247097; islandY[48] = -96161; islandN[48] = "Cannon Cove"
+islandX[49] = -197773; islandY[49] = -200711; islandN[49] = "Lonely Isle"
+islandX[50] = -141763; islandY[50] = -117577; islandN[50] = "Rum Runner Isle"
+islandX[51] = -149912; islandY[51] = -61976; islandN[51] = "North Star Sea Post"
+islandX[52] = -176038; islandY[52] = -14527; islandN[52] = "Twin Groves"
+islandX[53] = 30789; islandY[53] = 15754; islandN[53] = "Sea Dog's Tavern"
+islandX[54] = 187330; islandY[54] = 8591; islandN[54] = "Shrine of Flooded Embrace"
+islandX[55] = 266789; islandY[55] = -17657; islandN[55] = "Crooked Mast"
+islandX[56] = 376462; islandY[56] = -19008; islandN[56] = "Shiver Retreat"
+islandX[57] = 335006; islandY[57] = 67601; islandN[57] = "Shark Tooth Key"
+islandX[58] = 341037; islandY[58] = 141763; islandN[58] = "Mercys End Fortress"
+islandX[59] = 341037; islandY[59] = 141763; islandN[59] = "N13"
+islandX[60] = 681414; islandY[60] = 30865; islandN[60] = "Fetcher's Rest"
+islandX[61] = 847028; islandY[61] = 24400; islandN[61] = "Brian's Bazaar"
+islandX[62] = 916428; islandY[62] = 4520; islandN[62] = "Molten Sands Fortress"
+islandX[63] = 836805; islandY[63] = 93693; islandN[63] = "Cursewater Shores"
+islandX[64] = 862088; islandY[64] = 263623; islandN[64] = "Ruby's Fall"
+islandX[65] = 695105; islandY[65] = 322347; islandN[65] = "Morrows Peak Outpost"
+islandX[66] = 596063; islandY[66] = 262161; islandN[66] = "Forsaken Brink"
+islandX[67] = 619397; islandY[67] = 168321; islandN[67] = "Cinder Islet"
+islandX[68] = 830881; islandY[68] = 394511; islandN[68] = "Brimstone Rock"
+islandX[69] = 940301; islandY[69] = 407962; islandN[69] = "Glowstone Cay"
+islandX[70] = 879758; islandY[70] = 506121; islandN[70] = "Magmas Tide"
+islandX[71] = 757005; islandY[71] = 546313; islandN[71] = "Devil's Thirst"
+islandX[72] = 611017; islandY[72] = 564837; islandN[72] = "Roaring Sands"
+islandX[73] = 670707; islandY[73] = 656844; islandN[73] = "Ashen Reaches"
+islandX[74] = 325006; islandY[74] = 452559; islandN[74] = "Devil's Ridge"
+islandX[75] = 242891; islandY[75] = 346706; islandN[75] = "Crow's Nest Fortress"
+islandX[76] = 211099; islandY[76] = 444881; islandN[76] = "Mutineer Rock"
+islandX[77] = 187170; islandY[77] = 502692; islandN[77] = "Shrine of Ancient Tears"
+islandX[78] = 109205; islandY[78] = 480884; islandN[78] = "Thieves Haven"
+islandX[79] = 24384; islandY[79] = 568480; islandN[79] = "Old Brinstone Fortress"
+islandX[80] = 4912; islandY[80] = 512632; islandN[80] = "Booty isle"
+islandX[81] = 605728; islandY[81] = 470883; islandN[81] = "Roaring Traders"
+islandX[82] = 700238; islandY[82] = 459892; islandN[82] = "Flames End"
+islandX[83] = 369477; islandY[83] = 313845; islandN[83] = "Ancient Spire Outpost"
+islandX[84] = 146760; islandY[84] = 371368; islandN[84] = "Cutlass Cay"
+islandX[85] = 78968; islandY[85] = 319956; islandN[85] = "Paradise Spring"
+islandX[86] = -18130; islandY[86] = 381961; islandN[86] = "Plunder Outpost"
+islandX[87] = -77747; islandY[87] = 481468; islandN[87] = "Lookout Point"
+islandX[88] = -179137; islandY[88] = 456515; islandN[88] = "Shark Bait Cove"
+islandX[89] = -212180; islandY[89] = 382002; islandN[89] = "Shrine of Tribute"
+islandX[90] = -140227; islandY[90] = 338323; islandN[90] = "Lost Gold Fort"
+islandX[91] = -265455; islandY[91] = 332385; islandN[91] = "The Finest Trading Post"
+islandX[92] = -290473; islandY[92] = 400309; islandN[92] = "Old Salts Atoll"
+islandX[93] = -300255; islandY[93] = 460275; islandN[93] = "Ancient Gold Fortress"
+islandX[94] = -361703; islandY[94] = 313736; islandN[94] = "Discovery Rigde"
+islandX[95] = -241502; islandY[95] = 255960; islandN[95] = "Plunder Valley"
+islandX[96] = -351128; islandY[96] = 160700; islandN[96] = "Sailor's Knot Stronghold"
+islandX[97] = -424639; islandY[97] = 150931; islandN[97] = "Shrine of Oceans Fortune"
+islandX[98] = -157242; islandY[98] = 176150; islandN[98] = "Treasury of the Lost Ancients"
+islandX[99] = 5222; islandY[99] = 238993; islandN[99] = "Snake Isle"
+islandX[100] = -106153; islandY[100] = 242422; islandN[100] = "Chicken Isle"
+islandX[101] = 71001; islandY[101] = 232711; islandN[101] = "Stephen's Spoils"
+islandX[102] = 94017; islandY[102] = 155428; islandN[102] = "Fort of the Damned"
+islandX[103] = -6017; islandY[103] = 129194; islandN[103] = "Castaway Isle"
+islandX[104] = -88283; islandY[104] = 155235; islandN[104] = "Fool's Lagoon"
+islandX[105] = 163885; islandY[105] = 246305; islandN[105] = "Crook's Hollow"
+islandX[106] = 275365; islandY[106] = 231924; islandN[106] = "Barnacle Cay"
 
 -- Classes
 events = -1
@@ -591,7 +591,7 @@ function onRenderEvent()
 
         Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, optionR, optionB, optionG,optionA)
         Nexnet_String("Close", eBCX, eBCY, optionR, optionB, optionG,optionA, 15, 0)
-        Nexnet_String("v1.2.1", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
+        Nexnet_String("v1.2.2", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
     end
 
     -- BACKEND
@@ -669,12 +669,14 @@ function onRenderEvent()
                                     Nexnet_String("Chest of Tributes ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_SkullOfDestiny_Proxy_C" then
                                     Nexnet_String("Skull of Destiny ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
-                                elseif name == "BP_TreasureChest_Proxy_PirateLegend_DVR_C" then
-                                    Nexnet_String("Ashen Athena Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_Wondrous_ItemInfo_C" then
+                                    Nexnet_String("Box of Wondrous Secrets ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_TreasureChest_Proxy_ChestofFortune_C" then
                                     Nexnet_String("Chest of Fortune ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_TreasureChest_Proxy_PirateLegend_C" then
                                     Nexnet_String("Athena Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
+                                elseif name == "BP_TreasureChest_Proxy_PirateLegend_DVR_C" then
+                                    Nexnet_String("Ashen Athena Chest ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 end
                             end
                             
