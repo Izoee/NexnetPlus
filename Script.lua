@@ -353,7 +353,7 @@ function checkIfOutpost(name)
     for e = 9, 1, -1 do
         if index == nil then
             local parsedName = name:sub(pindex + 1, namelen)
-            if parsedName == "Outpost" or parsedName == "Hideout" then
+            if parsedName == "Outpost" or parsedName == "Hideout" or parsedName == "Merrick" then
                 return true
             else
                 return false
