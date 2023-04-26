@@ -3,7 +3,7 @@
 
 --[[
     CREDITS :
-        @Izodope#9936 - Main Creator
+        @Izodope#0710 - Main Creator
         @DevGrab#0815 - Adding Functions, GUI Help, & Emotional Support
         @Waffle#0758 - Mermaid Script
         @atom.#2135 - Ship Speed Script
@@ -1330,7 +1330,7 @@ function onKeyReleased(key)
 
 end
 
--- THIS MENU WAS MADE BY @Izodope#9936
+-- THIS MENU WAS MADE BY @Izodope#0710
 -- Please don't be a jackass, give credit where it's due.
 
 --[[
