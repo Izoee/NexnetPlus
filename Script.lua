@@ -3,7 +3,7 @@
 
 --[[
     CREDITS :
-        @Izodope#0710 - Main Creator
+        @Izodope#9936 - Main Creator
         @DevGrab#0815 - Adding Functions, GUI Help, & Emotional Support
         @Waffle#0758 - Mermaid Script
         @atom.#2135 - Ship Speed Script
@@ -1297,17 +1297,18 @@ function onRenderEvent()
         playerShipDist = math.floor(math.sqrt((posX - shipPosX)^2 + (posY - shipPosY)^2)/100)
         
         if shipType == 1 and playerShipDist < 20 then
-            Nexnet_String("Gold: "..currentShipGVal, midX, panY - 40, 255, 255, 0, 255, 15, 1)
-            Nexnet_String("Doubloons: "..currentShipDVal, midX, panY - 22, 0, 255, 255, 255, 15, 1)
+            Nexnet_String("Gold: "..currentShipGVal, midX, panY - 40, giValR, giValG, giValB, giValA, 15, 1)
+            Nexnet_String("Doubloons: "..currentShipDVal, midX, panY - 22, diValR, diValG, diValB, diValA, 15, 1)
         end
         if shipType == 2 and playerShipDist < 30 then
-            Nexnet_String("Gold: "..currentShipGVal, midX, panY - 40, 255, 255, 0, 255, 15, 1)
-            Nexnet_String("Doubloons: "..currentShipDVal, midX, panY - 22, 0, 255, 255, 255, 15, 1)
+            Nexnet_String("Gold: "..currentShipGVal, midX, panY - 40, giValR, giValG, giValB, giValA, 15, 1)
+            Nexnet_String("Doubloons: "..currentShipDVal, midX, panY - 22, diValR, diValG, diValB, diValA, 15, 1)
         end
         if shipType == 3 and playerShipDist < 35 then
-            Nexnet_String("Gold: "..currentShipGVal, midX, panY - 40, 255, 255, 0, 255, 15, 1)
-            Nexnet_String("Doubloons: "..currentShipDVal, midX, panY - 22, 0, 255, 255, 255, 15, 1)
+            Nexnet_String("Gold: "..currentShipGVal, midX, panY - 40, giValR, giValG, giValB, giValA, 15, 1)
+            Nexnet_String("Doubloons: "..currentShipDVal, midX, panY - 22, diValR, diValG, diValB, diValA, 15, 1)
         end
+        
         currentShipGVal = 0
         currentShipDVal = 0
     end
@@ -1330,7 +1331,7 @@ function onKeyReleased(key)
 
 end
 
--- THIS MENU WAS MADE BY @Izodope#0710
+-- THIS MENU WAS MADE BY @Izodope#9936
 -- Please don't be a jackass, give credit where it's due.
 
 --[[
