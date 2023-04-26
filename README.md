@@ -23,7 +23,7 @@ Current Version : 1.3.0 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - Current Ship's Loot Value Display
   + Supply Crates (Cannonball, Wood, Fireworks, etc) will not be added to the Loot Value (EVER)
   + Some Items may not add to the Loot Value, if you find one, message me the name and I'll try to add it
-  + Items in Collectors Chests can't be added to the Loot Value due to lua restrictions
+  + Items in Collector's Chests can't be added to the Loot Value due to lua restrictions
 
 #### Keybinds :
 - **HOME** - Open/Close the Menu  
