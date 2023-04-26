@@ -31,7 +31,7 @@ Current Version : 1.3.0 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - If you open the Nexnet+ Menu without opening an in-game menu, your mouse will not be visible. You can click anywhere besides the menu window to close the menu and reset its position to fix the problem.  
 #### Credits :
   - Izodope
-  - DevGrab
+  - [DevGrab (GitHub)](https://github.com/dvGrab?tab=repositories)
   - Waffle
   - atom
   - Camo
