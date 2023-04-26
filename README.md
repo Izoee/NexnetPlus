@@ -1,7 +1,7 @@
 # Nexnet+ 
 
 ![alt text](https://github.com/Izoee/NexnetPlus/blob/main/Resources/display130.png?raw=true)  
-Current Version : 1.2.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/Resources/changelog.md)
+Current Version : 1.3.0 - [View Changes](https://github.com/Izoee/NexnetPlus/blob/main/Resources/changelog.md)
 ### [Download and Enable Nexnet+](https://github.com/Izoee/NexnetPlus/blob/main/Resources/EnableNexnetPlus.md)
 
 #### Features :
@@ -20,6 +20,7 @@ Current Version : 1.2.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - Emissary Flag ESP
 - Gold Vault Key ESP
 - Stronghold/FoF/FotD Key ESP
+- Current Ship's Loot Value Display
 
 #### Keybinds :
 - **HOME** - Open/Close the Menu  
