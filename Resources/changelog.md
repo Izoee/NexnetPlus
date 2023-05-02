@@ -1,6 +1,9 @@
 ## Changes
+- **1.3.1**
+  + Fixed the Ship Loot Value
+  + Fixed the Shark ESP and Shark Alert to not detect Megalodons
 - **1.3.0 - RIP Nexnet Discord Update**
-  + Added Ship Loot Value display.
+  + Added Ship Loot Value display
 - **1.2.2**
   + Added Box of Wondrous Secrets to Valuable Items ESP
   + Renamed New Golden Sands Outpost to Port Merrick
