@@ -1,7 +1,8 @@
 ## Changes
 - **1.3.1**
   + Fixed the Ship Loot Value
-  + Fixed the Shark ESP and Shark Alert to not detect Megalodons
+  + Fixed the Shark ESP and Shark Alert to not detect Megalodon
+  + Removed the Skull of Destiny from the Valuable Item ESP
 - **1.3.0 - RIP Nexnet Discord Update**
   + Added Ship Loot Value display
 - **1.2.2**
