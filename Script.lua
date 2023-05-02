@@ -794,7 +794,7 @@ function onRenderEvent()
 
         Nexnet_Rect(eButtonX, eButtonY, eButtonW, eButtonH, optionR, optionB, optionG,optionA)
         Nexnet_String("Close", eBCX, eBCY, optionR, optionB, optionG,optionA, 15, 0)
-        Nexnet_String("v1.3.0", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
+        Nexnet_String("v1.3.1", pX + pW - 20, pY + pH - 17, 177, 177, 177, 255, 5, 0)
     end
 
     -- BACKEND
@@ -1004,9 +1004,10 @@ function onRenderEvent()
                         end
                             
                         if shipValToggle == true then
-                            if x ~= 0 and y ~= 0 then
-                                if shipType == 1 then
-                                    if distFromShip <= 20 and distFromShip > 0 then
+                          
+                            if shipType == 1 then
+                                if z/100 > shipPosZ/100 - 2 then
+                                    if distFromShip <= 20 then
                                         if playerShipDist <= 20 then
                                             for e = 0, 133, 1 do
                                                 if name == giName[e] then
@@ -1021,10 +1022,12 @@ function onRenderEvent()
                                         end
                                     end
                                 end
-                                if shipType == 2 then
-                                    if distFromShip <= 30 and distFromShip > 0 then
+                            end
+                            if shipType == 2 then
+                                if z/100 > shipPosZ/100 - 1 then
+                                    if distFromShip <= 30 then
                                         if playerShipDist <= 30 then
-                                            for e = 0, 131, 1 do
+                                            for e = 0, 133, 1 do
                                                 if name == giName[e] then
                                                     addToGTotal(giVal[e])
                                                 end
@@ -1037,8 +1040,10 @@ function onRenderEvent()
                                         end
                                     end
                                 end
-                                if shipType == 3 then
-                                    if distFromShip <= 35 and distFromShip > 0 then
+                            end
+                            if shipType == 3 then
+                                if z/100 > shipPosZ/100 - 6 then
+                                    if distFromShip <= 35 then
                                         if playerShipDist <= 35 then
                                             for e = 0, 131, 1 do
                                                 if name == giName[e] then
@@ -1072,17 +1077,21 @@ function onRenderEvent()
                     local x, y, z = Nexnet_GetActorLocation(sharks, i)
                     local sX, sY = Nexnet_WorldToScreen(x, y, z)
                     dist = math.floor(math.sqrt((posX - x)^2 + (posY - y)^2)/100)
+                    gName = Nexnet_GetActorName(sharks, i)
+                    name = parseName(gName)
                     if x ~= 0 and y ~= 0 then
                         if dist <= 50 then
-                            if sharkToggle == true then
-                                if sX > 0 then
-                                    Nexnet_String("- Shark -", sX, sY, sharkR, sharkG, sharkB, sharkA, 15, 1)
+                            if name == "BP_Shark_C" then
+                                if sharkToggle == true then
+                                    if sX > 0 then
+                                        Nexnet_String("Shark ["..dist.."m]", sX, sY, sharkR, sharkG, sharkB, sharkA, 15, 1)
+                                    end
                                 end
-                            end
-                            if sharkAlertToggle == true then
-                                if roundPosZ <= 300 then
-                                    if sX <= 0 then
-                                        Nexnet_String("! Shark ["..dist.."m] !", midX, midY + (i*25), sAlertR, sAlertG, sAlertB, sAlertA, 15, 1)
+                                if sharkAlertToggle == true then
+                                    if roundPosZ <= 300 then
+                                        if sX <= 0 then
+                                            Nexnet_String("! Shark ["..dist.."m] !", midX, midY + (i*25), sAlertR, sAlertG, sAlertB, sAlertA, 15, 1)
+                                        end
                                     end
                                 end
                             end
@@ -1238,25 +1247,18 @@ function onRenderEvent()
                             if dist < 20 then -- Sloop Bounds
                                 shipType = 1
                                 shipPosX, shipPosY, shipPosZ = x, y, z
-                            elseif dist >= 20 then
-                                currentShipGVal = 0
-                                currentShipDVal = 0
                             end
-                        elseif name == "BP_MediumShipTemplate_C" then
+                        end
+                        if name == "BP_MediumShipTemplate_C" then
                             if dist < 30 then -- Brig Bounds
                                 shipType = 2
                                 shipPosX, shipPosY, shipPosZ = x, y, z
-                            elseif dist >= 30 then
-                                currentShipGVal = 0
-                                currentShipDVal = 0
                             end
-                        elseif name == "BP_LargeShipTemplate_C" then
+                        end
+                        if name == "BP_LargeShipTemplate_C" then
                             if dist < 35 then -- Galleon Bounds
                                 shipType = 3
                                 shipPosX, shipPosY, shipPosZ = x, y, z
-                            elseif dist >= 35 then
-                                currentShipGVal = 0
-                                currentShipDVal = 0
                             end
                         end
                     end
