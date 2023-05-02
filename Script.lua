@@ -872,8 +872,6 @@ function onRenderEvent()
                                     Nexnet_String("Ashen Winds Skull ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_TreasureChest_Vault_Proxy_C" then
                                     Nexnet_String("Chest of Tributes ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
-                                elseif name == "BP_SkullOfDestiny_Proxy_C" then
-                                    Nexnet_String("Skull of Destiny ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_Wondrous_ItemInfo_C" then
                                     Nexnet_String("Box of Wondrous Secrets ["..dist.."m]", sX, sY, valuableR, valuableG, valuableB, valuableA, 15, 1)
                                 elseif name == "BP_TreasureChest_Proxy_ChestofFortune_C" then
@@ -1004,7 +1002,6 @@ function onRenderEvent()
                         end
                             
                         if shipValToggle == true then
-                          
                             if shipType == 1 then
                                 if z/100 > shipPosZ/100 - 2 then
                                     if distFromShip <= 20 then
