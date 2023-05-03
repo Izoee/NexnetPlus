@@ -1,6 +1,6 @@
 ## Changes
 - **1.3.1**
-  + Fixed the Ship Loot Value
+  + Fixed Ship Loot Value
   + Fixed the Shark ESP and Shark Alert to not detect Megalodon
   + Removed the Skull of Destiny from the Valuable Item ESP
   + Stopped the Gold Vault Key ESP from displaying when the Key isn't on the screen
