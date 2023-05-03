@@ -36,6 +36,6 @@ Current Version : 1.3.2 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
   - Izodope
   - [DevGrab (GitHub)](https://github.com/dvGrab)
   - Waffle
-  - atom
+  - [atom (GitHub)](https://github.com/AtomDaFed?tab=repositories)
   - Camo
   - Juke
