@@ -940,67 +940,68 @@ function onRenderEvent()
                                     Nexnet_String("Merchant Flag Grade 1 ["..dist.."m]", sX, sY, emissaryR, emissaryG, emissaryB, emissaryA, 15, 1)
                                 end
                             end
-                        end    
-                        if goldHoarderKeyToggle == true then
-                            if name == "BP_Totem_GoldShark_Proxy_C" then
-                                Nexnet_String("Kraken's Fall Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_SilverShark_Proxy_C" then
-                                Nexnet_String("Kraken's Fall Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_StoneShark_Proxy_C" then
-                                Nexnet_String("Kraken's Fall Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                            
+                            if goldHoarderKeyToggle == true then
+                                if name == "BP_Totem_GoldShark_Proxy_C" then
+                                    Nexnet_String("Kraken's Fall Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverShark_Proxy_C" then
+                                    Nexnet_String("Kraken's Fall Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneShark_Proxy_C" then
+                                    Nexnet_String("Kraken's Fall Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                        
+                                elseif name == "BP_Totem_GoldBoar_Proxy_C" then
+                                    Nexnet_String("Devil's Ridge Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverBoar_Proxy_C" then
+                                    Nexnet_String("Devil's Ridge Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneBoar_Proxy_C" then
+                                    Nexnet_String("Devil's Ridge Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
                                     
-                            elseif name == "BP_Totem_GoldBoar_Proxy_C" then
-                                Nexnet_String("Devil's Ridge Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_SilverBoar_Proxy_C" then
-                                Nexnet_String("Devil's Ridge Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_StoneBoar_Proxy_C" then
-                                Nexnet_String("Devil's Ridge Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                                
-                            elseif name == "BP_Totem_GoldMoon_Proxy_C" then
-                                Nexnet_String("Crescent Isle Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_SilverMoon_Proxy_C" then
-                                Nexnet_String("Crescent Isle Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_StoneMoon_Proxy_C" then
-                                Nexnet_String("Crescent Isle Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                                
-                            elseif name == "BP_Totem_GoldSnake_Proxy_C" then
-                                Nexnet_String("Mermaid's Hideaway Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_SilverSnake_Proxy_C" then
-                                Nexnet_String("Mermaid's Hideaway Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)    
-                            elseif name == "BP_Totem_StoneSnake_Proxy_C" then
-                                Nexnet_String("Mermaid's Hideaway Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_GoldMoon_Proxy_C" then
+                                    Nexnet_String("Crescent Isle Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverMoon_Proxy_C" then
+                                    Nexnet_String("Crescent Isle Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneMoon_Proxy_C" then
+                                    Nexnet_String("Crescent Isle Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
                                     
-                            elseif name == "BP_Totem_GoldScarab_Proxy_C" then
-                                Nexnet_String("Crook's Hollow Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_SilverScarab_Proxy_C" then
-                                Nexnet_String("Crook's Hollow Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_StoneScarab_Proxy_C" then
-                                Nexnet_String("Crook's Hollow Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                                    
-                            elseif name == "BP_Totem_GoldCrab_Proxy_C" then
-                                Nexnet_String("N-13 Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_SilverCrab_Proxy_C" then
-                                Nexnet_String("N-13 Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_StoneCrab_Proxy_C" then
-                                Nexnet_String("N-13 Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                                    
-                            elseif name == "BP_Totem_GoldEagle_Proxy_C" then
-                                Nexnet_String("Fetcher's Rest Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_SilverEagle_Proxy_C" then
-                                Nexnet_String("Fetcher's Rest Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_StoneEagle_Proxy_C" then
-                                Nexnet_String("Fetcher's Rest Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                                    
-                                    
-                            elseif name == "BP_Totem_GoldSun_Proxy_C" then
-                                Nexnet_String("Ashen Reaches Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_SilverSun_Proxy_C" then
-                                Nexnet_String("Ashen Reaches Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
-                            elseif name == "BP_Totem_StoneSun_Proxy_C" then
-                                Nexnet_String("Ashen Reaches Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_GoldSnake_Proxy_C" then
+                                    Nexnet_String("Mermaid's Hideaway Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverSnake_Proxy_C" then
+                                    Nexnet_String("Mermaid's Hideaway Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)    
+                                elseif name == "BP_Totem_StoneSnake_Proxy_C" then
+                                    Nexnet_String("Mermaid's Hideaway Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                        
+                                elseif name == "BP_Totem_GoldScarab_Proxy_C" then
+                                    Nexnet_String("Crook's Hollow Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverScarab_Proxy_C" then
+                                    Nexnet_String("Crook's Hollow Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneScarab_Proxy_C" then
+                                    Nexnet_String("Crook's Hollow Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                        
+                                elseif name == "BP_Totem_GoldCrab_Proxy_C" then
+                                    Nexnet_String("N-13 Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverCrab_Proxy_C" then
+                                    Nexnet_String("N-13 Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneCrab_Proxy_C" then
+                                    Nexnet_String("N-13 Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                        
+                                elseif name == "BP_Totem_GoldEagle_Proxy_C" then
+                                    Nexnet_String("Fetcher's Rest Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverEagle_Proxy_C" then
+                                    Nexnet_String("Fetcher's Rest Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneEagle_Proxy_C" then
+                                    Nexnet_String("Fetcher's Rest Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                        
+                                        
+                                elseif name == "BP_Totem_GoldSun_Proxy_C" then
+                                    Nexnet_String("Ashen Reaches Gold Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_SilverSun_Proxy_C" then
+                                    Nexnet_String("Ashen Reaches Silver Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                elseif name == "BP_Totem_StoneSun_Proxy_C" then
+                                    Nexnet_String("Ashen Reaches Stone Key ["..dist.."m]", sX, sY, ghKeyR, ghKeyG, ghKeyB, ghKeyA, 15, 1)
+                                end
                             end
                         end
-                            
+                        
                         if shipValToggle == true then
                             if shipType == 1 then
                                 if z/100 > shipPosZ/100 - 2 then
