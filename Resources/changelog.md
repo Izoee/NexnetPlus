@@ -5,6 +5,7 @@
   + Renamed Stronghold Keys to Fort Keys
   + Added Sea Fort Keys to Fort Keys ESP
   + Fixed Ship Speed Showing in the top left corner
+  + Added Captain's Logbooks to the Loot Value
 
 - **1.3.2**
   + Removed the Skull of Destiny from the Valuable Item ESP
