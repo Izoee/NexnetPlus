@@ -30,8 +30,8 @@ Current Version : 2.0.0 - [View Changes](https://github.com/Izoee/NexnetPlus/blo
 - **LEFT CLICK** (Anywhere but the Menu) - Closes the Menu and resets its position  
 
 #### Bugs :  
-- There is an issue where the menu can get stuck in the bottom left corner. You can click anywhere on the screen to close the menu and reset the position to fix the issue. 
-- If you open the Nexnet+ Menu without opening an in-game menu, your mouse will not be visible. You can click anywhere besides the menu window to close the menu and reset its position to fix the problem.  
+- If you open the Nexnet+ Menu without opening an in-game menu, your mouse will not be visible. You can click anywhere besides the menu window to close the menu and reset its position to fix the problem.
+
 #### Credits :
   - Izodope
   - [DevGrab (GitHub)](https://github.com/dvGrab)
